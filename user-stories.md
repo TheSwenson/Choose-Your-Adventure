@@ -52,3 +52,9 @@ As a carefree teen, I am looking for a new and exciting way to waste time on the
       <br><br>
 As a bored office worker I am looking for a way to live an exciting life vicariously through a fictional character online. 
    - Come up with a good idea to write a CYOA story on.
+
+As a user, I would like to see simple animations that correspond with my choices in this Choose Your Own Adventure game
+
+As a user I would like to enter my name and have a personalized story that uses my name.
+
+As a user I would like a game that asks for my preferred pronouns to further personalize the story
