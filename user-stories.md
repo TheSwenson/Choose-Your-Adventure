@@ -25,9 +25,17 @@ Get User Input:
 as a user I want to be able to choose between different dialogue options so that it makes the game more interesting
     Have multiple dialogue options that result in different results and story options
 <br>
+After selecting input, I, the user, want the game to progress to the next scene per my selection, so that I can keep playing
+    After selecting an input, display the results of that option (show next scene).
 <br>
 Save User Input:
+As a developer, whenever the user makes a game changing decision, I want to save their input automatically, that way they don't have to.
+    save stuff automatically.
 
+Get Users Name:
+As a user, I'd really appreciate it if the game would ask for my name at the beginning, so that I can have a more personalized experience.
+    When loading the page, if there is no stored name, ask the user for a name, then proceed with story.
+<br>
 
 NEW USER STORIES
     As a user I want my name to be used in the game so that i have an immersive experience
