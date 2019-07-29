@@ -46,3 +46,9 @@ NEW USER STORIES
     <br>
     As a developer, I want the scene object to have a render method which takes a root element and appends the dialogue and options, using proper HTML elements, to that root element, so that I just have to call render(element) on a scene and have it display.
         create a render method which appends a dialogue and options to a passed in element
+    <br>
+    As a user, I would like to see simple animations that correspond with my choices in this Choose Your Own Adventure game
+    <br>
+    As a user I would like to enter my name and have a personalized story that uses my name.
+    <br>
+    As a user I would like a game that asks for my preferred pronouns to further personalize the story
