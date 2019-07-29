@@ -17,15 +17,17 @@ class Scene {
 
   render() {
     const sceneElement = document.createElement('div');
+    sceneElement.classList.add('scene');
     const dialogueElement = document.createElement('p');
-    dialogueElement.id = 'dialogue';
+    dialogueElement.classList.add('dialogue');
     dialogueElement.textContent = this.sceneDialogue;
     const optionsElement = document.createElement('div');
-    optionsElement.id = 'options';
+    optionsElement.classList.add('options');
     sceneElement.appendChild(dialogueElement);
     for (const option of this.options) {
       const optionButton = document.createElement('button');
       optionButton.textContent = option.dialogue;
+      optionButton.classList.add('option');
       optionButton.addEventListener('click', () => showScene(option.scene));
       optionsElement.appendChild(optionButton);
     }
