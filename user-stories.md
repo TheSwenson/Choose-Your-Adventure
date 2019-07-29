@@ -1,60 +1,54 @@
 <h3>Definition: CYOA: Choose Your Own Adventure</h3>
-
-<h2>Developer Stories:</h2>
-Developer Epic 1: As a developer, I want there to be some kind of "Story API," that will allow us to create new CYOA rapidly by creating objects that represent the story frames and automatically generate/show the elements required.
-<br><br>
-As a developer, I want to be able to create a story object, which contains the dialogue, possibly a picture, and the options the user could take, which would be references to other story objects, possibly contained in a container object with an option dialogue to show. That way, all we'd need to do to create a story is to link together a bunch of story objects, or "Scene" objects.
-<br><br>
-Name of object could be "StoryFrame" or "Scene", or something like that.
-   - create an object named storyFrame that renders our CYOA
-<br><br>
-As a developer, I want there to be a "User" object, to store user information, like username, password, and highscore, so that managing user information is handled all in one place.
-   - create a function that makes a new user and stores their game data and info into local storage
-   <br><br>
-As a developer, I want the "User" object to have a "save to local storage" and "read from local storage" options, to make persistent data easy.
-   - create a function that stores data in local storage after each turn and on logout
-   <br><br>
-As a developer, I want some form of "story graph" using "Scenes" as nodes in the tree/graph, so that adding a new scene/story is as easy as adding more nodes to an already existing story graph, or just making a new story graph from a start node.
-  -  make a function that can easily prototyped into making new story branches
-  <br><br>
-As a developer, I want the whole story to take place on a single page, changing the contents of a "root" node for each story frame/scene, that way our application is more concise and so that the user will have a harder time cheating by specifying urls or something.
-   - Create an html page that makes our game layout nicely using css and js constructors
-   <br><br>
-As a developer, I want the frame/scene objects to accept any number of possible options, that way stories can be infinitely complex.
-  -  Create multiple options and multiple outcomes for each question.
-  <br><br>
-As a developer, I MAY want some kind of story factory that will assemble a story graph using methods and a changing internal state, that way the code will be easier to read and more concise.
-   - create a function that renders our story from pre written options
-   <br><br>
-
-<h2>User Stories:</h2>
-User Epic 1: As a user, I want to be able to log in and play CYOA game(s) on a single page, so that I can have a good time.
-<br><br>
-User Epic: As a user, I want a visual so that I can see whats going on in the story, so that I dont have to rely on my imagination.
-<br><br>
-User Epic: As a gamer, I like to have multiple options, so that I can choose what path i want to go down.
-<br><br>
-As a user with mobility and vision problems, I need a game that is easily accessible with easy to read fonts and color schemes as well as a way to select options with ease.
-   - create a game with easy to read fonts and color schemes so people can access it.
-   <br><br>
-As a casual web surfer i'm looking for a simple game that I can play in my free time and come back to whenever I please without losing my progress.
-   - create a game with local storage and username and passwords
-   <br><br>
-As a user with the need to know how i'm doing I want a way to visually see how far i've made it in this game.
-    create a round counter
-    <br><br>
-As a creative developer I want the site to be aesthetically pleasing with nice page layout, and creative css options.
-   - use css options that will style our page in a unique fashion
-<br><br>
-As a carefree teen, I am looking for a new and exciting way to waste time on the internet.
-   - Create a game that we ourselves want to play!
-      -  good dialogue, visually appealing
-      <br><br>
-As a bored office worker I am looking for a way to live an exciting life vicariously through a fictional character online. 
-   - Come up with a good idea to write a CYOA story on.
-
-As a user, I would like to see simple animations that correspond with my choices in this Choose Your Own Adventure game
-
-As a user I would like to enter my name and have a personalized story that uses my name.
-
-As a user I would like a game that asks for my preferred pronouns to further personalize the story
+NEW USER STORIES
+    As a user I want my name to be used in the game so that i have an immersive experience
+        -Create an object that inserts the users name into the game
+    <br>
+    as a user I want to be able to choose between different dialogue options so that it makes the game more interesting
+        Have multiple dialogue options that result in different results and story options
+    <br>
+    as a user I want pictures to help narrate my story so that it helps illustrate the story
+        have images that can implemented into the users adventure
+    <br>
+    as a user I want fonts that wont strain my eyes or be dificult to read so that anyone can play the game
+        have a font that's good with accessibility 
+    <br>
+    as a user I don't want to lose my progress if I leave the page so that i can continue my game
+        store data in local storage that will be called when the user loads back into the page
+    <br>
+    as a user I want to be able to create my own story so that I can come up with my own adventures that my friends can go on
+        create a form option that creates a users own story
+    <br>
+    as a developer I want people to know about me and what I can do so that I can get future work!
+        create an about me page that tells the users a little about the creators
+    <br>
+    as a user I want the ability to logout so that I know my progress is saved
+        create a logout option that saves user data and notifies them
+    <br>
+    as a user I want turn i'm on so I can determine my progress into the game
+        create a turn counter that displays how many questions they have gone through
+    <br>
+    as a user I want the game to be pleasing to look at so that it doesn't seem like a small crappy game
+        use creative css options to help style our game
+    <br>
+    as a user I want to be able to see the visuals so that i dont have to rely on my imagination.
+        -display an image of what is going on in the story
+    <br>
+    as a user i need a way to determine which path is the right path so that i can choose the path i want, wether it be evil or good.
+        -implament a good/bad rating system
+    <br>
+    As a developer, I want to have an object that represents a scene in the story so that all the code relating to managing stories
+    is in one place.
+        create a "scene" object that contains the dialogue and options, and possibly rendering code, for scenes of stories.
+    <br>
+    As a developer, I want the scene object constructor to take a dialogue string and the scene objects for each
+    option the user can make, so that the scene object has all the data it needs stored locally.
+        create a constructor in the scene class that takes a dialogue string and scene objects, and stores them in itself.
+    <br>
+    As a developer, I want the scene object to have a render method which takes a root element and appends the dialogue and options, using proper HTML elements, to that root element, so that I just have to call render(element) on a scene and have it display.
+        create a render method which appends a dialogue and options to a passed in element
+    <br>
+    As a user, I would like to see simple animations that correspond with my choices in this Choose Your Own Adventure game
+    <br>
+    As a user I would like to enter my name and have a personalized story that uses my name.
+    <br>
+    As a user I would like a game that asks for my preferred pronouns to further personalize the story
