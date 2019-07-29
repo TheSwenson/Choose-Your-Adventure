@@ -16,27 +16,98 @@ class Scene {
   }
 
   render() {
-    var sceneElement = document.createElement('div');
-    var dialogueElement = document.createElement('p');
+    const sceneElement = document.createElement('div');
+    const dialogueElement = document.createElement('p');
     dialogueElement.id = 'dialogue';
     dialogueElement.textContent = this.sceneDialogue;
+    const optionsElement = document.createElement('div');
+    optionsElement.id = 'options';
     sceneElement.appendChild(dialogueElement);
-    for (var option of this.options) {
-      var optionButton = document.createElement('button');
+    for (const option of this.options) {
+      const optionButton = document.createElement('button');
       optionButton.textContent = option.dialogue;
-      optionButton.addEventListener(() => {
-
-      });
+      optionButton.addEventListener('click', () => showScene(option.scene));
+      optionsElement.appendChild(optionButton);
     }
+    sceneElement.appendChild(optionsElement);
+    return sceneElement;
   }
 }
 
-var start = new Scene('Hello');
-var right = new Scene('right');
-var left = new Scene('left');
+function createSceneGraph(sceneJson) {
+  let scenes = [];
+  for (const scene in sceneJson) {
+    scenes[scene] = new Scene(sceneJson[scene].text);
+  }
+  for (const scene in sceneJson) {
+    for (const option of sceneJson[scene].options) {
+      scenes[scene].addOption(option[0], scenes[option[1]]);
+    }
+  }
+  return scenes;
+}
 
-var deathScene = new Scene('You died, fool');
+function getRootElement() {
+  return document.getElementById('scene-root');
+}
 
-start.addOption('Go left', left);
-start.addOption('Go right', right);
-start.addOption('Go down', deathScene);
+function showScene(scene) {
+  const rootElement = getRootElement();
+  rootElement.innerHTML = '';
+  rootElement.appendChild(scene.render());
+}
+/*
+Story JSON structure:
+{
+'sceneName': {
+  text: 'Scene dialogue here',
+  options: [
+    ['Option text here', 'options sceneName'],
+    ['Option text here', 'options sceneName'],
+    ... etc ...
+  ]
+},
+'sceneName': {
+  text: 'Scene dialogue here',
+  options: [
+    ['Option text here', 'sceneName'],
+    ['Option text here', 'sceneName'],
+    ... etc ...
+  ]
+},
+... etc ...
+}
+*/
+const crappyStoryJson = {
+  'start': {
+    text: 'A stranger says hello to you',
+    options: [
+      ['Say hello back...', 'sayHello'],
+      ['Say nothing...', 'sayNothing'],
+    ],
+  },
+  'sayHello': {
+    text: 'You say hello to the stranger... he smiles back. :)',
+    options: [
+      ['Punch the stranger', 'die'],
+      ['Leave him alone', 'die'],
+    ],
+  },
+  'sayNothing': {
+    text: 'You say nothing. The stranger gets pretty angry...',
+    options: [
+      ['Punch the stranger', 'die'],
+      ['Leave him alone', 'die'],
+    ],
+  },
+  'die': {
+    text: 'Oh no! You died! Better luck next time...',
+    options: [],
+  }
+};
+
+const sceneGraph = createSceneGraph(crappyStoryJson);
+
+console.log(sceneGraph);
+
+showScene(sceneGraph['start']);
