@@ -30,6 +30,10 @@ As a developer, I MAY want some kind of story factory that will assemble a story
 <h2>User Stories:</h2>
 User Epic 1: As a user, I want to be able to log in and play CYOA game(s) on a single page, so that I can have a good time.
 <br><br>
+User Epic: As a user, I want a visual so that I can see whats going on in the story, so that I dont have to rely on my imagination.
+<br><br>
+User Epic: As a gamer, I like to have multiple options, so that I can choose what path i want to go down.
+<br><br>
 As a user with mobility and vision problems, I need a game that is easily accessible with easy to read fonts and color schemes as well as a way to select options with ease.
    - create a game with easy to read fonts and color schemes so people can access it.
    <br><br>
