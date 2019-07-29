@@ -52,3 +52,4 @@ NEW USER STORIES
     As a user I would like to enter my name and have a personalized story that uses my name.
     <br>
     As a user I would like a game that asks for my preferred pronouns to further personalize the story
+    <br>
