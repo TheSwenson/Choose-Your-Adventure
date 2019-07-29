@@ -28,7 +28,13 @@ as a user I want to be able to choose between different dialogue options so that
 After selecting input, I, the user, want the game to progress to the next scene per my selection, so that I can keep playing
     After selecting an input, display the results of that option (show next scene).
 <br>
+as a user I want turn i'm on so I can determine my progress into the game
+        create a turn counter that displays how many questions they have gone through
 Save User Input:
+as a user I don't want to lose my progress if I leave the page so that i can continue my game
+        store data in local storage that will be called when the user loads back into the page
+as a user I want to know that my game is saved and I can return to it so that I won't lose my progress
+    Add an option to manually save game progress into local storage
 As a developer, whenever the user makes a game changing decision, I want to save their input automatically, that way they don't have to.
     save stuff automatically.
 
@@ -44,8 +50,7 @@ NEW USER STORIES
     as a user I want fonts that wont strain my eyes or be dificult to read so that anyone can play the game
         have a font that's good with accessibility
     <br>
-    as a user I don't want to lose my progress if I leave the page so that i can continue my game
-        store data in local storage that will be called when the user loads back into the page
+    
     <br>
     as a user I want to be able to create my own story so that I can come up with my own adventures that my friends can go on
         create a form option that creates a users own story
@@ -56,8 +61,7 @@ NEW USER STORIES
     as a user I want the ability to logout so that I know my progress is saved
         create a logout option that saves user data and notifies them
     <br>
-    as a user I want turn i'm on so I can determine my progress into the game
-        create a turn counter that displays how many questions they have gone through
+    
     <br>
     as a user I want the game to be pleasing to look at so that it doesn't seem like a small crappy game
         use creative css options to help style our game
