@@ -21,9 +21,12 @@ class Scene {
     dialogueElement.id = 'dialogue';
     dialogueElement.textContent = this.sceneDialogue;
     sceneElement.appendChild(dialogueElement);
-    for (var i = 0; i < this.options.length; i++) {
+    for (var option of this.options) {
       var optionButton = document.createElement('button');
-      optionButton.setAttribute('type', 'radio');
+      optionButton.textContent = option.dialogue;
+      optionButton.addEventListener(() => {
+
+      });
     }
   }
 }
@@ -32,5 +35,8 @@ var start = new Scene('Hello');
 var right = new Scene('right');
 var left = new Scene('left');
 
+var deathScene = new Scene('You died, fool');
+
 start.addOption('Go left', left);
 start.addOption('Go right', right);
+start.addOption('Go down', deathScene);
