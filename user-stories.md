@@ -50,7 +50,7 @@ NEW USER STORIES
     as a user I want fonts that wont strain my eyes or be dificult to read so that anyone can play the game
         have a font that's good with accessibility
     <br>
-    
+
     <br>
     as a user I want to be able to create my own story so that I can come up with my own adventures that my friends can go on
         create a form option that creates a users own story
@@ -61,7 +61,7 @@ NEW USER STORIES
     as a user I want the ability to logout so that I know my progress is saved
         create a logout option that saves user data and notifies them
     <br>
-    
+
     <br>
     as a user I want the game to be pleasing to look at so that it doesn't seem like a small crappy game
         use creative css options to help style our game
@@ -74,3 +74,7 @@ NEW USER STORIES
     As a user I would like to enter my name and have a personalized story that uses my name.
     <br>
     As a user I would like a game that asks for my preferred pronouns to further personalize the story
+
+
+STRETCH GOALS:
+time limit, adds stress
