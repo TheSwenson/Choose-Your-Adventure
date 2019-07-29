@@ -50,6 +50,4 @@ As a carefree teen, I am looking for a new and exciting way to waste time on the
       <br><br>
 As a bored office worker I am looking for a way to live an exciting life vicariously through a fictional character online. 
    - Come up with a good idea to write a CYOA story on.
-   <br>
-   <br>
-   <br>
+   <br><br>
