@@ -3,12 +3,12 @@
 
 <h2>Developer Stories:</h2>
 Developer Epic 1: As a developer, I want there to be some kind of "Story API," that will allow us to create new CYOA rapidly by creating objects that represent the story frames and automatically generate/show the elements required.
-<br/>
+<br><br>
 As a developer, I want to be able to create a story object, which contains the dialogue, possibly a picture, and the options the user could take, which would be references to other story objects, possibly contained in a container object with an option dialogue to show. That way, all we'd need to do to create a story is to link together a bunch of story objects, or "Scene" objects.
-<br/>
+<br><br>
 Name of object could be "StoryFrame" or "Scene", or something like that.
    - create an object named storyFrame that renders our CYOA
-<br>
+<br><br>
 As a developer, I want there to be a "User" object, to store user information, like username, password, and highscore, so that managing user information is handled all in one place.
    - create a function that makes a new user and stores their game data and info into local storage
    <br><br>
