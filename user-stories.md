@@ -2,9 +2,8 @@
 
 
 <h2>Developer Stories:</h2>
-Developer Epic 1: As a developer, I want there to be some kind of "Story API," that will allow us to create new CYOA rapidly by creating objects
-that represent the story frames and automatically generate/show the elements required.
-
+Developer Epic 1: As a developer, I want there to be some kind of "Story API," that will allow us to create new CYOA rapidly by creating objects that represent the story frames and automatically generate/show the elements required.
+<br>
 As a developer, I want to be able to create a story object, which contains the dialogue, possibly a picture, and the options the user could take, which would be references to other story objects, possibly contained in a container object with an option dialogue to show. That way, all we'd need to do to create a story is to link together a bunch of story objects, or "Scene" objects.
 
 Name of object could be "StoryFrame" or "Scene", or something like that.
