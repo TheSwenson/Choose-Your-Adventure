@@ -73,6 +73,13 @@ function renderScene(parent, story, sceneName) {
   //Display in parent
   parent.innerHTML = '';
   parent.appendChild(sceneElement);
+  currentStory.innerHTML='';
+  currentStory.push(parent);
+  currentStory.push(story);
+  currentStory.push(sceneName);
+}
+function saveStory(){
+  localStorage.setItem("currentStory", JSON.stringify(currentStory))
 }
 
 renderScene(document.getElementById('scene-root'), testStory, 'start');
