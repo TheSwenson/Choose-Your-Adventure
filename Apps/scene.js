@@ -3,20 +3,20 @@
 Story JSON structure:
 {
 'sceneName': {
-  text: 'Scene dialogue here',
-  options: [
-    ['Option text here', 'options sceneName'],
-    ['Option text here', 'options sceneName'],
-    ... etc ...
-  ]
+text: 'Scene dialogue here',
+options: [
+['Option text here', 'options sceneName'],
+['Option text here', 'options sceneName'],
+... etc ...
+]
 },
 'sceneName': {
-  text: 'Scene dialogue here',
-  options: [
-    ['Option text here', 'sceneName'],
-    ['Option text here', 'sceneName'],
-    ... etc ...
-  ]
+text: 'Scene dialogue here',
+options: [
+['Option text here', 'sceneName'],
+['Option text here', 'sceneName'],
+... etc ...
+]
 },
 ... etc ...
 }
@@ -45,7 +45,9 @@ const testStory = {
   },
   'die': {
     text: 'Oh no! You\'ve died! Better luck next time...',
-    options: [],
+    options: [
+      ['Restart', 'start'],
+    ],
   }
 };
 
@@ -60,19 +62,11 @@ function renderScene(parent, story, sceneName) {
   sceneElement.appendChild(dialogueElement);
   const optionsElement = document.createElement('div');
   optionsElement.classList.add('options');
-  if (scene.options.length > 0) {
-    for (const option of scene.options) {
-      const optionButton = document.createElement('button');
-      optionButton.textContent = option[0];
-      optionButton.classList.add('option');
-      optionButton.addEventListener('click', () => renderScene(parent, story, option[1]));
-      optionsElement.appendChild(optionButton);
-    }
-  } else {
+  for (const option of scene.options) {
     const optionButton = document.createElement('button');
-    optionButton.textContent = 'Restart';
+    optionButton.textContent = option[0];
     optionButton.classList.add('option');
-    optionButton.addEventListener('click', () => renderScene(parent, story, 'start'));
+    optionButton.addEventListener('click', () => renderScene(parent, story, option[1]));
     optionsElement.appendChild(optionButton);
   }
   sceneElement.appendChild(optionsElement);
@@ -81,8 +75,4 @@ function renderScene(parent, story, sceneName) {
   parent.appendChild(sceneElement);
 }
 
-function getRootElement() {
-  return document.getElementById('scene-root');
-}
-
-renderScene(getRootElement(), testStory, 'start');
+renderScene(document.getElementById('scene-root'), testStory, 'start');
