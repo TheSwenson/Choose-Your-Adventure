@@ -2,14 +2,14 @@
 /*
 Story JSON structure:
 {
-'sceneName': {
-text: 'Scene dialogue here',
-options: [
-['Option text here', 'options sceneName'],
-['Option text here', 'options sceneName'],
-... etc ...
-]
-},
+  'sceneName': {
+    text: 'Scene dialogue here',
+    options: [
+      ['Option text here', 'sceneName'],
+      ['Option text here', 'sceneName'],
+      ... etc ...
+    ]
+  },
 'sceneName': {
 text: 'Scene dialogue here',
 options: [
@@ -32,14 +32,14 @@ const testStory = {
   'sayHello': {
     text: 'You say hello to the stranger... he smiles back. :)',
     options: [
-      ['Punch the stranger', 'die'],
+      ['Punch the stranger', 'punchStranger'],
       ['Leave him alone', 'die'],
     ],
   },
   'sayNothing': {
     text: 'You say nothing. The stranger gets pretty angry...',
     options: [
-      ['Punch the stranger', 'die'],
+      ['Punch the stranger', 'punchStranger'],
       ['Leave him alone', 'die'],
     ],
   },
@@ -48,7 +48,33 @@ const testStory = {
     options: [
       ['Restart', 'start'],
     ],
-  }
+  },
+  'punchStranger': {
+    text: 'You punch the stranger. He doesn\'t much care for that',
+    options: [
+      ['Run away', 'runAway'],
+      ['Apologize', 'apologize'],
+    ],
+  },
+  'runAway': {
+    text: 'You run away, but he stabs you in the back. Now you\'re dead...',
+    options: [
+      ['Restart', 'start'],
+    ],
+  },
+  'apologize': {
+    text: 'You apologize, profusely, to the stranger. He accepts, and now you\'re best friends for life. YOU WIN!!!',
+    options: [
+      ['Restart', 'start'],
+    ],
+  },
+  'punchStranger': {
+    text: 'You punch the stranger. He doesn\'t much care for that',
+    options: [
+      ['Run away', 'runAway'],
+      ['Apologize', 'apologize'],
+    ],
+  },
 };
 
 function renderScene(parent, story, sceneName) {
