@@ -1,76 +1,4 @@
-class Scene {
-  constructor(sceneJson) {
-    this.sceneDialogue = sceneJson.text;
-    this.options = sceneJson.options || [];
-  }
-
-  addOption(optionDialogue, scene) {
-    this.options.push([optionDialogue, scene]);
-  }
-
-  render(sceneGraph) {
-    const sceneElement = document.createElement('div');
-    sceneElement.classList.add('scene');
-    const dialogueElement = document.createElement('p');
-    dialogueElement.classList.add('dialogue');
-    dialogueElement.textContent = this.sceneDialogue;
-    sceneElement.appendChild(dialogueElement);
-    const optionsElement = document.createElement('div');
-    optionsElement.classList.add('options');
-    if (this.options.length > 0) {
-      for (const option of this.options) {
-        const optionButton = document.createElement('button');
-        optionButton.textContent = option[0];
-        optionButton.classList.add('option');
-        optionButton.addEventListener('click', () => sceneGraph.showScene(option[1]));
-        optionsElement.appendChild(optionButton);
-      }
-    } else {
-      const optionButton = document.createElement('button');
-      optionButton.textContent = 'Restart';
-      optionButton.classList.add('option');
-      optionButton.addEventListener('click', () => sceneGraph.showScene('start'));
-      optionsElement.appendChild(optionButton);
-    }
-    sceneElement.appendChild(optionsElement);
-    return sceneElement;
-  }
-
-  toJSON() {
-    return {
-      'text': this.sceneDialogue,
-      'options': this.options,
-    }
-  }
-}
-
-class SceneGraph {
-  constructor(sceneGraphJson) {
-    let scenes = [];
-    for (const scene in sceneGraphJson) {
-      scenes[scene] = new Scene(sceneGraphJson[scene]);
-    }
-    this.scenes = scenes;
-  }
-
-  showScene(scene) {
-    const rootElement = getRootElement();
-    rootElement.innerHTML = '';
-    rootElement.appendChild(this.scenes[scene].render(this));
-  }
-
-  toJSON() {
-    let graph = {};
-    for (const scene in this.scenes) {
-      graph[scene] = this.scenes[scene].toJSON();
-    }
-    return graph;
-  }
-}
-
-function getRootElement() {
-  return document.getElementById('scene-root');
-}
+'use-strict';
 /*
 Story JSON structure:
 {
@@ -121,6 +49,40 @@ const crappyStoryJson = {
   }
 };
 
-const sceneGraph = new SceneGraph(crappyStoryJson);
-console.log(sceneGraph);
-sceneGraph.showScene('start');
+function renderScene(parent, scene) {
+  let sceneJson = crappyStoryJson[scene];
+
+  const sceneElement = document.createElement('div');
+  sceneElement.classList.add('scene');
+  const dialogueElement = document.createElement('p');
+  dialogueElement.classList.add('dialogue');
+  dialogueElement.textContent = sceneJson.text;
+  sceneElement.appendChild(dialogueElement);
+  const optionsElement = document.createElement('div');
+  optionsElement.classList.add('options');
+  if (sceneJson.options.length > 0) {
+    for (const option of sceneJson.options) {
+      const optionButton = document.createElement('button');
+      optionButton.textContent = option[0];
+      optionButton.classList.add('option');
+      optionButton.addEventListener('click', () => renderScene(parent, option[1]));
+      optionsElement.appendChild(optionButton);
+    }
+  } else {
+    const optionButton = document.createElement('button');
+    optionButton.textContent = 'Restart';
+    optionButton.classList.add('option');
+    optionButton.addEventListener('click', () => renderScene(parent, 'start'));
+    optionsElement.appendChild(optionButton);
+  }
+  sceneElement.appendChild(optionsElement);
+  //Display in parent
+  parent.innerHTML = '';
+  parent.appendChild(sceneElement);
+}
+
+function getRootElement() {
+  return document.getElementById('scene-root');
+}
+
+renderScene(getRootElement(), 'start');
