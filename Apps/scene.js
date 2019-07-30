@@ -10,22 +10,25 @@ class Scene {
 
   render(sceneGraph) {
     const sceneElement = document.createElement('div');
+    sceneElement.classList.add('scene');
     const dialogueElement = document.createElement('p');
-    dialogueElement.id = 'dialogue';
+    dialogueElement.classList.add('dialogue');
     dialogueElement.textContent = this.sceneDialogue;
     sceneElement.appendChild(dialogueElement);
     const optionsElement = document.createElement('div');
-    optionsElement.id = 'options';
+    optionsElement.classList.add('options');
     if (this.options.length > 0) {
       for (const option of this.options) {
         const optionButton = document.createElement('button');
         optionButton.textContent = option[0];
+        optionButton.classList.add('option');
         optionButton.addEventListener('click', () => sceneGraph.showScene(option[1]));
         optionsElement.appendChild(optionButton);
       }
     } else {
       const optionButton = document.createElement('button');
       optionButton.textContent = 'Restart';
+      optionButton.classList.add('option');
       optionButton.addEventListener('click', () => sceneGraph.showScene('start'));
       optionsElement.appendChild(optionButton);
     }
