@@ -1,3 +1,18 @@
 .storyTitle {
+    font-family: 'Lacquer', sans-serif;
+    font-size: 4.5rem;
+}
+.turnNum {
+    color: rgb(160, 10, 10);
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1.5px solid rgb(160, 10, 10);
+    width: 15%;
+    font-size: 1.5rem;
+    padding:.25rem;
+    font-weight: bolder;
+    
+}
+body {
+    background-color:gray;
     
 }
