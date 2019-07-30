@@ -64,12 +64,9 @@ NEW USER STORIES
     as a user I want the ability to logout so that I know my progress is saved
         create a logout option that saves user data and notifies them
     <br>
-<<<<<<< HEAD
     as a user I want to know what turn i'm on so I can determine my progress into the game
         create a turn counter that displays how many questions they have gone through
-=======
 
->>>>>>> 963d62672b29fb74e286374359ed8f9fd8437493
     <br>
     as a user I want the game to be pleasing to look at so that it doesn't seem like a small crappy game
         use creative css options to help style our game
@@ -77,7 +74,6 @@ NEW USER STORIES
     as a user i need a way to determine which path is the right path so that i can choose the path i want, wether it be evil or good.
         -implament a good/bad rating system
     <br>
-<<<<<<< HEAD
     As a developer, I want to have an object that represents a scene in the story so that all the code relating to managing stories
     is in one place.
         create a "scene" object that contains the dialogue and options, and possibly rendering code, for scenes of stories.
@@ -91,19 +87,18 @@ NEW USER STORIES
     <br>
     As a user, I would like to see simple images that correspond with my choices in this Choose Your Own Adventure game
         -add images to each decision page
-=======
+
     As a user, I would like to see simple animations that correspond with my choices in this Choose Your Own Adventure game
->>>>>>> 963d62672b29fb74e286374359ed8f9fd8437493
+
+    As a user, I would like to see simple animations that correspond with my choices in this Choose Your Own Adventure game
+
     <br>
     As a user I would like to enter my name and have a personalized story that uses my name.
         -create a submission form for the user's name that is stored so it can be used in the story
     <br>
     As a user I would like a game that asks for my preferred pronouns to further personalize the story
-<<<<<<< HEAD
-        -create a submission form for the user's preferred pronouns that is stored so it can be used in the story
-=======
 
+        -create a submission form for the user's preferred pronouns that is stored so it can be used in the story
 
 STRETCH GOALS:
 time limit, adds stress
->>>>>>> 963d62672b29fb74e286374359ed8f9fd8437493
