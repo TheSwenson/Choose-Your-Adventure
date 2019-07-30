@@ -3,20 +3,20 @@
 }*/
 .storyTitle {
     font-family: 'Lacquer', sans-serif;
-    font-size: 4.5rem;
+    font-size: 6vw;
     text-align: center;
     color: #3F88C5;
-    max-width: 80%;
+    max-width: 66vw;
+    margin: 0 auto;
 }
 .turnNum {
     color: #E94F37;
     font-family: 'Lacquer', sans-serif;
     border: 1.5px solid ;
-    width: 15%;
+    width: 20vw;
     font-size: 1.5rem;
     padding:.25rem;
     font-weight: bolder;
-
 }
 /*button */
 .option {
@@ -46,12 +46,11 @@ header {
   margin-bottom: 5vh;
   color: #E94F37;
   font-family: 'Lacquer', sans-serif;
+
 }
 a{
   color: #3F88C5;
-  
 }
-
 body {
   width: 100vw;
   height: 100vh;
@@ -70,7 +69,7 @@ body {
 }
 #nav-div {
   float: left;
-  width: 50vw;
+  width: 40vw;
   height: 10vw;
   /*padding: 4vw 0 0 0;*/
 }
@@ -106,8 +105,29 @@ nav {
   clear: both;
   display: table;
 }
+
 p.dialogue{
   font-family: 'Fredoka One', cursive;
 
 font-size: 2rem;
+}
+#JacobErvin {
+  color: #F6F7EB;
+  float: left;
+  width: 23%;
+}
+#JacobSwenson {
+  color: #F6F7EB;
+  float: left;
+  width: 23%;
+}
+#Andy {
+  color: #F6F7EB;
+  float: left;
+  width: 23%;
+}
+#Calvin {
+  color: #F6F7EB;
+  float: left;
+  width: 23%;
 }
