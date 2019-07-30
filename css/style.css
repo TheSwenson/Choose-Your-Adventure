@@ -3,16 +3,17 @@
 }*/
 .storyTitle {
     font-family: 'Lacquer', sans-serif;
-    font-size: 4.5rem;
+    font-size: 6vw;
     text-align: center;
     color: #3F88C5;
-    max-width: 80%;
+    max-width: 66vw;
+    margin: 0 auto;
 }
 .turnNum {
-    color: #A6530D;
+    color: #44BBA4;
     font-family: Arial, Helvetica, sans-serif;
     border: 1.5px solid ;
-    width: 15%;
+    width: 20vw;
     font-size: 1.5rem;
     padding:.25rem;
     font-weight: bolder;
@@ -37,6 +38,7 @@ footer {
     text-align: center;
     margin: 0 auto;
     max-width: 65%;
+    color: #F6F7EB;
 }
 header {
   background-color: #262626;
@@ -50,7 +52,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  background-color:black;
+  background-color: #262626;
 }
 #logo-div, #nav-div {
   float: left;
@@ -100,4 +102,24 @@ nav {
   content: "";
   clear: both;
   display: table;
+}
+#JacobErvin {
+  color: #F6F7EB;
+  float: left;
+  width: 23%;
+}
+#JacobSwenson {
+  color: #F6F7EB;
+  float: left;
+  width: 23%;
+}
+#Andy {
+  color: #F6F7EB;
+  float: left;
+  width: 23%;
+}
+#Calvin {
+  color: #F6F7EB;
+  float: left;
+  width: 23%;
 }
