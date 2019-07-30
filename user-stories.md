@@ -72,12 +72,28 @@ NEW USER STORIES
     as a user i need a way to determine which path is the right path so that i can choose the path i want, wether it be evil or good.
         -implament a good/bad rating system
     <br>
+    As a developer, I want to have an object that represents a scene in the story so that all the code relating to managing stories
+    is in one place.
+        create a "scene" object that contains the dialogue and options, and possibly rendering code, for scenes of stories.
+    <br>
+    As a developer, I want the scene object constructor to take a dialogue string and the scene objects for each
+    option the user can make, so that the scene object has all the data it needs stored locally.
+        create a constructor in the scene class that takes a dialogue string and scene objects, and stores them in itself.
+    <br>
+    As a developer, I want the scene object to have a render method which takes a root element and appends the dialogue and options, using proper HTML elements, to that root element, so that I just have to call render(element) on a scene and have it display.
+        create a render method which appends a dialogue and options to a passed in element
+    <br>
+    As a user, I would like to see simple images that correspond with my choices in this Choose Your Own Adventure game
+        -add images to each decision page
     As a user, I would like to see simple animations that correspond with my choices in this Choose Your Own Adventure game
+
     <br>
     As a user I would like to enter my name and have a personalized story that uses my name.
+        -create a submission form for the user's name that is stored so it can be used in the story
     <br>
     As a user I would like a game that asks for my preferred pronouns to further personalize the story
 
+        -create a submission form for the user's preferred pronouns that is stored so it can be used in the story
 
 STRETCH GOALS:
 time limit, adds stress
