@@ -79,6 +79,7 @@ nav a, #hello-message {
 #hello-message {
   font-weight: 900;
   font-size: 250%;
+  overflow:hidden;
 }
 nav a {
   font-weight: 900;
