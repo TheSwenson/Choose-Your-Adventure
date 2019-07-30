@@ -10,8 +10,8 @@
     margin: 0 auto;
 }
 .turnNum {
-    color: #44BBA4;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #E94F37;
+    font-family: 'Lacquer', sans-serif;
     border: 1.5px solid ;
     width: 20vw;
     font-size: 1.5rem;
@@ -30,7 +30,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #262626;
+    background-color: black;
     color: white;
     text-align: center;
 }
@@ -39,11 +39,14 @@ footer {
     margin: 0 auto;
     max-width: 65%;
     color: #F6F7EB;
+
 }
 header {
-  background-color: #262626;
+  background-color: black;
   margin-bottom: 5vh;
-  color: #F6F7EB;
+  color: #E94F37;
+  font-family: 'Lacquer', sans-serif;
+
 }
 a{
   color: #3F88C5;
@@ -101,6 +104,12 @@ nav {
   content: "";
   clear: both;
   display: table;
+}
+
+p.dialogue{
+  font-family: 'Fredoka One', cursive;
+
+font-size: 2rem;
 }
 #JacobErvin {
   color: #F6F7EB;
