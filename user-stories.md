@@ -24,7 +24,7 @@ NEW USER STORIES
     as a user I want the ability to logout so that I know my progress is saved
         create a logout option that saves user data and notifies them
     <br>
-    as a user I want turn i'm on so I can determine my progress into the game
+    as a user I want to know what turn i'm on so I can determine my progress into the game
         create a turn counter that displays how many questions they have gone through
     <br>
     as a user I want the game to be pleasing to look at so that it doesn't seem like a small crappy game
