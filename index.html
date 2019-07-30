@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jacaja</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jacaja</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <header>
-    <a href='/' id='logo'>
-      <img src='img/logo.png'></img>
-    </a>
-    <nav>
-      <a href='game.html'>Game</a>
-      <a href='aboutus.html'>About Us</a>
-      <a href='index.html'>Choose Name</a>
-    </nav>
-    <div id='account-wrapper'>
-      <p id='hello-message'></p>
+    <div class='clearfix'>
+      <div id='logo-div'>
+        <a href='/' id='logo'>
+          <img src='img/logo.png'></img>
+        </a>
+      </div>
+      <div id='nav-div'>
+        <nav>
+          <a href='game.html'>Game</a>
+          <a href='aboutus.html'>About Us</a>
+          <a href='index.html'>Choose Name</a>
+        </nav>
+      </div>
+      <div id='hello-div'>
+        <p id='hello-message'>Yo scrub</p>
+      </div>
     </div>
   </header>
-  <form>
-    <label for='name'>Enter your name:</label>
-    <input type='text' id='name' name='name' placeholder='Your name here...'></input>
-    <input type='submit' id='submit' name='submit' value='Submit'></input>
-  </form>
+  <main>
+    <form id='choose-name'>
+      <label for='name'>Enter your name:</label>
+      <input type='text' id='name' name='name' placeholder='Your name here...'></input>
+      <input type='submit' id='submit' name='submit' value='Submit'></input>
+    </form>
+  </main>
   <footer>
-      <p> &copy; GAMENAMEPLACEHOLDER</p>
+    <p> &copy; GAMENAMEPLACEHOLDER</p>
   </footer>
 </body>
 </html>
