@@ -17,7 +17,6 @@
     font-size: 1.5rem;
     padding:.25rem;
     font-weight: bolder;
-
 }
 /*button */
 .option {
@@ -45,11 +44,9 @@ header {
   background-color: #262626;
   margin-bottom: 5vh;
   color: #F6F7EB;
-  
 }
 a{
   color: #3F88C5;
-  
 }
 body {
   width: 100vw;
@@ -69,7 +66,7 @@ body {
 }
 #nav-div {
   float: left;
-  width: 50vw;
+  width: 40vw;
   height: 10vw;
   /*padding: 4vw 0 0 0;*/
 }
