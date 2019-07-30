@@ -20,12 +20,31 @@
     font-weight: bolder;
     margin: 0 auto;
 }
+.label {
+  font-family: 'Lacquer', sans-serif;
+  font-size: 3rem;
+  color: #E94F37;
+}
+#submit, #name {
+  text-align: center;
+  font-family: 'Lacquer', sans-serif;
+  font-size: 1.5rem;
+  color: #E94F37;
+  background-color: #262626;
+  border: 2px solid #101010;
+  border-radius: 5px;
+  transition-duration: 1s;
+}
+#submit:hover {
+  box-shadow: 0 0 10px #E94F37;
+}
 /*button */
 .option {
     height: 4rem;
     width: 8rem;
     border-right: 3px solid rgb(44, 43, 43);
     border-bottom: 3px solid rgb(44, 43, 43);
+    font-family: 'Lacquer', sans-serif;
 }
 footer {
     position: fixed;
@@ -48,7 +67,6 @@ header {
   margin-bottom: 5vh;
   color: #E94F37;
   font-family: 'Lacquer', sans-serif;
-
 }
 a{
   color: #3F88C5;
