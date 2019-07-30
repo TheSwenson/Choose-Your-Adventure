@@ -5,13 +5,13 @@
     font-family: 'Lacquer', sans-serif;
     font-size: 6vw;
     text-align: center;
-    color: #3F88C5;
+    color: #01ffc3;
     max-width: 66vw;
     margin: 0 auto;
     margin-bottom: 3rem;
 }
 .turnNum {
-    color: #E94F37;
+    color: #01ffff;
     font-family: 'Lacquer', sans-serif;
     border: 1.5px solid ;
     width: 20vw;
@@ -65,11 +65,11 @@ footer {
 header {
   background-color: black;
   margin-bottom: 5vh;
-  color: #E94F37;
+  color: #01ffc3;
   font-family: 'Lacquer', sans-serif;
 }
 a{
-  color: #3F88C5;
+  color: #ffb3fd;
 }
 body {
   width: 100vw;
