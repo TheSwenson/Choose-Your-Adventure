@@ -21,7 +21,7 @@ Story JSON structure:
 ... etc ...
 }
 */
-const crappyStoryJson = {
+const testStory = {
   'start': {
     text: 'A stranger says hello to you',
     options: [
@@ -49,30 +49,30 @@ const crappyStoryJson = {
   }
 };
 
-function renderScene(parent, scene) {
-  let sceneJson = crappyStoryJson[scene];
+function renderScene(parent, story, sceneName) {
+  let scene = story[sceneName];
 
   const sceneElement = document.createElement('div');
   sceneElement.classList.add('scene');
   const dialogueElement = document.createElement('p');
   dialogueElement.classList.add('dialogue');
-  dialogueElement.textContent = sceneJson.text;
+  dialogueElement.textContent = scene.text;
   sceneElement.appendChild(dialogueElement);
   const optionsElement = document.createElement('div');
   optionsElement.classList.add('options');
-  if (sceneJson.options.length > 0) {
-    for (const option of sceneJson.options) {
+  if (scene.options.length > 0) {
+    for (const option of scene.options) {
       const optionButton = document.createElement('button');
       optionButton.textContent = option[0];
       optionButton.classList.add('option');
-      optionButton.addEventListener('click', () => renderScene(parent, option[1]));
+      optionButton.addEventListener('click', () => renderScene(parent, story, option[1]));
       optionsElement.appendChild(optionButton);
     }
   } else {
     const optionButton = document.createElement('button');
     optionButton.textContent = 'Restart';
     optionButton.classList.add('option');
-    optionButton.addEventListener('click', () => renderScene(parent, 'start'));
+    optionButton.addEventListener('click', () => renderScene(parent, story, 'start'));
     optionsElement.appendChild(optionButton);
   }
   sceneElement.appendChild(optionsElement);
@@ -85,4 +85,4 @@ function getRootElement() {
   return document.getElementById('scene-root');
 }
 
-renderScene(getRootElement(), 'start');
+renderScene(getRootElement(), testStory, 'start');
