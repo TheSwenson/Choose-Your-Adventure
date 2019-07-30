@@ -9,7 +9,7 @@
     max-width: 80%;
 }
 .turnNum {
-    color: #A6530D;
+    color: #44BBA4;
     font-family: Arial, Helvetica, sans-serif;
     border: 1.5px solid ;
     width: 15%;
@@ -38,6 +38,7 @@ footer {
     text-align: center;
     margin: 0 auto;
     max-width: 65%;
+    color: #F6F7EB;
 }
 header {
   background-color: #262626;
@@ -53,7 +54,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  background-color:black;
+  background-color: #262626;
 }
 #logo-div, #nav-div {
   float: left;
