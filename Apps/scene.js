@@ -50,7 +50,7 @@ const testStory = {
     ],
   }
 };
-
+var currentStory = [];
 function renderScene(parent, story, sceneName) {
   let scene = story[sceneName];
 
