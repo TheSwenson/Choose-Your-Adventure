@@ -31,6 +31,10 @@ After selecting input, I, the user, want the game to progress to the next scene 
 as a user I want turn i'm on so I can determine my progress into the game
         create a turn counter that displays how many questions they have gone through
 Save User Input:
+as a user I don't want to lose my progress if I leave the page so that i can continue my game
+        store data in local storage that will be called when the user loads back into the page
+as a user I want to know that my game is saved and I can return to it so that I won't lose my progress
+    Add an option to manually save game progress into local storage
 As a developer, whenever the user makes a game changing decision, I want to save their input automatically, that way they don't have to.
     save stuff automatically.
 
