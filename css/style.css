@@ -8,6 +8,7 @@
     color: #3F88C5;
     max-width: 66vw;
     margin: 0 auto;
+    margin-bottom: 3rem;
 }
 .turnNum {
     color: #44BBA4;
@@ -17,7 +18,7 @@
     font-size: 1.5rem;
     padding:.25rem;
     font-weight: bolder;
-
+    margin: 0 auto;
 }
 /*button */
 .option {
