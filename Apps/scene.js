@@ -50,10 +50,10 @@ const testStory = {
     ],
   }
 };
-var currentStory = [];
+
 function renderScene(parent, story, sceneName) {
   let scene = story[sceneName];
-
+  window.localStorage.currentScene = sceneName;
   const sceneElement = document.createElement('div');
   sceneElement.classList.add('scene');
   const dialogueElement = document.createElement('p');
@@ -73,29 +73,8 @@ function renderScene(parent, story, sceneName) {
   //Display in parent
   parent.innerHTML = '';
   parent.appendChild(sceneElement);
-  currentStory.innerHTML='';
-  currentStory.push(sceneName);
+  
 }
 
-renderScene(document.getElementById('scene-root'), testStory, 'start');
-clearStory();
-saveStory();
+renderScene(document.getElementById('scene-root'), testStory, window.localStorage.currentScene || 'start');
 
-function saveStory(){
-  localStorage.setItem("currentStory", currentStory);
-  console.log(localStorage);
-}
-function clearStory(){
-  localStorage.innerHTML = '';
-};
-
-function setStory(){
-  var storage = localStorage['currentStory'];
-    if(storage){
-      currentStory = storage;
-      renderScene(currentStory);
-    }
-    else{
-      return;
-    }
-};
