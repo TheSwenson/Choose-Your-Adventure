@@ -186,7 +186,7 @@ function renderScene(parent, story, sceneName) {
     window.localStorage.currentScene = sceneName;
   }
 
-  if (window.localStorage.turnCounter == 0) {
+  if (window.localStorage.turnCounter === 0) {
     window.localStorage.turnCounter = 1;
   }
 
