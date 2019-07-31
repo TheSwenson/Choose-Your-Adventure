@@ -159,9 +159,14 @@ function renderScene(parent, story, sceneName) {
   if (scene.pre) {
     scene.pre();
   }
+
   if (window.localStorage.currentScene !== sceneName){
     window.localStorage.turnCounter++;
     window.localStorage.currentScene = sceneName;
+  }
+
+  if (window.localStorage.turnCounter == 0) {
+    window.localStorage.turnCounter = 1;
   }
 
   if (scene.image) {
