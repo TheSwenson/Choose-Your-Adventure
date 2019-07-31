@@ -81,6 +81,9 @@ body {
   margin: 0;
   background-color: #262626;
 }
+#sceen-root {
+  margin-bottom: 5vh;
+}
 #logo-div, #nav-div {
   float: left;
 }
@@ -152,7 +155,7 @@ font-size: 2rem;
   color: #F6F7EB;
   float: left;
   width: 23%;
-  
+
 }
 #Calvin {
   color: #F6F7EB;
