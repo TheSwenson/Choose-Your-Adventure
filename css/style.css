@@ -166,6 +166,10 @@ font-size: 2rem;
   margin-right: 10px;
 }
 
-.red {
+.pink {
     color: #fb33db;
+}
+
+.gameTitle {
+    font-family: 'Lacquer', sans-serif;
 }
