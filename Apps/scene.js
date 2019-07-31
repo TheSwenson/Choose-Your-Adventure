@@ -87,7 +87,7 @@ const testStory = {
     text: 'You walk into cafeteria where you find a lifetime supply of snack pack puddings in every flavor imagineable. (Including double chocolate. You obviously win!',
     options: [
       ['Restart', 'start'],
-      
+
     ],
   },
   'gym': {
@@ -116,7 +116,7 @@ const testStory = {
     text: 'You immedately lay down on the ground in the fetal position where the cruel 5th graders take no pity on you and pelt you with an endless barrage of hard rubber balls until you die. You lose!',
     options: [
       ['Restart', 'start'],
-      
+
     ],
 
   },
@@ -140,8 +140,58 @@ const testStory = {
       ['Go to general store', 'generalStore'],
       ['Go to school', 'townSchool'],
     ]
-  }
+  },
+  'farmHouse': {
+    text: 'You walk into the farmhouse and discover a family that has been killed by some sort of creature... What are you going to do?',
+    options: [
+      ['Leave!', 'start2'],
+      ['Investigate', 'investigate'],
+    ]
+  },
+  'start2': {
+    text: 'You come back to where you started. Are you going to head into town or go back to the farm house?',
+    options: [
+      ['Head into town', 'eastTown'],
+      ['Walk towards the farmhouse', 'farmHouse']
+    ]
+  },
+  'investigate': {
+    text: 'You investigate the family and find that they have claw marks all over their bodies... Now what?',
+    options: [
+      ['Search the house', 'houseSearch'],
+      ['Turn and run!', 'wolves']
+    ]
+  },
+  'houseSearch': {
+    text: 'You decide to search the house and in the basement you find an entrance to a strange underground tunnel. Do you enter?',
+    options: [
+      ['Enter the tunnel', 'nukeSilo'],
+      ['Turn tail and run', 'stranger']
+    ]
+  },
+  'nukeSilo': {
+    text: 'You enter the tunnel which after a few hundred feet opens into a missle silo. In the control room there\'s a big shiny red button. You can push it if you want, but do you?',
+    options: [
+      ['Push the button', 'nukeTheWorld'],
+      ['Stay away from the button and leave', 'mysteriousStranger']
+    ]
+  },
+  'nukeTheWorld': {
+    text: 'Who can resist pushing the big red buton right? You press it and the missle roars to life. The silo opens and the missle lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
+    options: [
+      ['Restart', 'start'],
+      
+    ]
+  },
+  'mysteriousStranger': {
+    text: 'After retreating from the silo and exiting the farm house a mysterious man is standing out front. What are you going to do?',
+    options: [
+      ['Ignore him', 'ignore'],
+      ['Punch him in the face', 'farmHouse']
+    ]
+  },
 };
+
 
 function renderScene(parent, story, sceneName) {
   let scene = story[sceneName];
@@ -149,8 +199,8 @@ function renderScene(parent, story, sceneName) {
     scene.pre();
   }
   if (window.localStorage.currentScene !== sceneName){
-  window.localStorage.turnCounter++;
-  window.localStorage.currentScene = sceneName;
+    window.localStorage.turnCounter++;
+    window.localStorage.currentScene = sceneName;
   }
 
   var turnCounter = document.querySelector('h3.turnNum');
@@ -176,7 +226,6 @@ function renderScene(parent, story, sceneName) {
   //Display in parent
   parent.innerHTML = '';
   parent.appendChild(sceneElement);
-
 }
 
 if (!window.localStorage.turnCounter) {
