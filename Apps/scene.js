@@ -4,8 +4,11 @@ Story JSON structure:
 {
   'sceneName': {
     text: 'Scene dialogue here',
+    pre: function() {
+
+    },
     options: [
-      ['Option text here', 'sceneName'],
+      ['Option text here', 'consequence'],
       ['Option text here', 'sceneName'],
       ... etc ...
     ]
@@ -48,6 +51,10 @@ var inventory = {
 }
 const testStory = {
   'start': {
+    pre: function() {
+      resetInventory();
+      window.localStorage.turnCounter = 0;
+    },
     text: 'A stranger says hello to you',
     options: [
       ['Say hello back...', 'sayHello'],
@@ -104,7 +111,15 @@ const testStory = {
 
 function renderScene(parent, story, sceneName) {
   let scene = story[sceneName];
+  if (scene.pre) {
+    scene.pre();
+  }
+  if (window.localStorage.currentScene !== sceneName){
+  window.localStorage.turnCounter++;
   window.localStorage.currentScene = sceneName;
+  }
+  var turnCounter = document.querySelector('h3.turnNum');
+  turnCounter.textContent = 'Current Turn: ' + window.localStorage.turnCounter;
   const sceneElement = document.createElement('div');
   sceneElement.classList.add('scene');
   const dialogueElement = document.createElement('p');
@@ -127,6 +142,9 @@ function renderScene(parent, story, sceneName) {
   
 }
 
+if (!window.localStorage.turnCounter) {
+  window.localStorage.turnCounter = 0;
+}
+
 loadInventory();
-console.log(inventory);
 renderScene(document.getElementById('scene-root'), testStory, window.localStorage.currentScene || 'start');
