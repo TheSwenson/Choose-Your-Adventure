@@ -51,6 +51,7 @@ var inventory = {
 }
 const testStory = {
   'start': {
+    image: 'images/Doomsday vault.jpg',
     pre: function() {
       resetInventory();
       window.localStorage.turnCounter = 0;
@@ -64,6 +65,7 @@ const testStory = {
     ],
   },
   'townSchool': {
+    image: 'images/school.jpg',
     text: 'You enter the school and are immediately swarmed by a pack of angry, ravenous kindergarteners with sticky hands.',
     options: [
       ['fight them', 'fightKind'],
@@ -71,6 +73,7 @@ const testStory = {
     ],
   },
   'schoolGetaway': {
+    image: 'images/school.jpg',
     text: 'The kids are distracted by the the bright colorful screens and you slip away unnoticed. You make it into the hallways where there are two doors. One leads to the cafeteria, the other to he gym. Which door do you choose?',
     options: [
       ['cafeteria', 'cafeteria'],
@@ -78,12 +81,14 @@ const testStory = {
     ],
   },
   'fightKind': {
+    image: 'images/school.jpg',
     text: 'You grab the nearest charging kindergartener and start swinging wildly, but you are quickly overrun and fall to their sticky hands.',
     options: [
       ['Restart', 'start'],
     ],
   },
   'cafeteria': {
+    image: 'images/school.jpg',
     text: 'You walk into cafeteria where you find a lifetime supply of snack pack puddings in every flavor imagineable. (Including double chocolate. You obviously win!',
     options: [
       ['Restart', 'start'],
@@ -91,6 +96,7 @@ const testStory = {
     ],
   },
   'gym': {
+    image: 'images/school.jpg',
     text: 'You open the door and walk into the gymnasium where a group of undead 5th graders are armed with dodgeballs. It is an impossible choice what should you do in this situation?',
     options: [
       ['5 d\'s of dodgeball', '5dodge'],
@@ -98,6 +104,7 @@ const testStory = {
     ],
   },
   '5dodge': {
+    image: 'images/school.jpg',
     text: 'You dodge, duck, dip, dive and ... dodge all around the 5th graders and take them all down! Patches o\'houlihan is smiling down on you, as you walk away from your victory. You win!!',
     options: [
       ['Restart', 'start'],
@@ -105,6 +112,7 @@ const testStory = {
   },
 
   'eastTown': {
+    image: 'images/Post-Apocalyptic_Cityscape_600.jpg',
     text: 'You enter the town, and see a police station and a general store...',
     options: [
       ['Go to the police station...', 'policeStation'],
@@ -121,6 +129,7 @@ const testStory = {
 
   },
   'policeStation': {
+    image: 'images/police.jpg',
     text: 'You enter the police station, and find a person locked in a cell...',
     options: [
       ['Release the prisoner...', 'releasePrisoner'],
@@ -128,13 +137,15 @@ const testStory = {
     ]
   },
   'releasePrisoner': {
+    image: 'images/police.jpg',
     text: 'You throw caution to the wind and decide to ope the cell for the prisoner. He thanks you and immediately lunges at you strangling you. Seems he was locked up for a reason... You lose!',
     options: [
       ['Restart', 'start'],
-      
+
     ]
   },
   'moveOn': {
+    image: 'images/Post-Apocalyptic_Cityscape_600.jpg',
     text: 'You exit the police station, and see the general store, and a school that you missed before...',
     options: [
       ['Go to general store', 'generalStore'],
@@ -169,9 +180,22 @@ function renderScene(parent, story, sceneName) {
   if (scene.pre) {
     scene.pre();
   }
+
   if (window.localStorage.currentScene !== sceneName){
     window.localStorage.turnCounter++;
     window.localStorage.currentScene = sceneName;
+  }
+
+  if (window.localStorage.turnCounter == 0) {
+    window.localStorage.turnCounter = 1;
+  }
+
+  if (scene.image) {
+    console.log('Setting img');
+    document.querySelector('body').style.backgroundImage = `url('${scene.image}')`;
+  } else {
+    console.log('No img');
+    document.querySelector('body').style.backgroundImage = 'url(\'images/post-apocalyptic-1920x1080-284864-media.jpg\')';
   }
 
   var turnCounter = document.querySelector('h3.turnNum');
