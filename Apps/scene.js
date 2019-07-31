@@ -140,7 +140,28 @@ const testStory = {
       ['Go to general store', 'generalStore'],
       ['Go to school', 'townSchool'],
     ]
-  }
+  },
+  'generalStore': {
+    text: 'You cautiously approach the decrepit general store. You can hear raised voices from outside. As you open the creaky door it becomes immediately apparent that there is a robbery in progress. A scary looking raider guy with spikes all over his leather clothes has a laser pistol pointed at the shopkeeper and his cat. The shopkeeper is even scarier. Old as sin and missing an eye, he seems unfazed by his current situation... What will you do? ',
+    options: [
+      ['Help the shopkeeper', 'helpShopkeeper'],
+      ['Leave as quickly as you came', 'leaveShopkeeper'],
+    ]
+  },
+  'helpShopkeeper': {
+    text: 'You dash over to the raider, give him a little boop on the nose and a swift kick to his rear. He shrieks in terror and scampers away. You reach over and give the cat on the counter a scratch behind his ears. The shopkeeper thanks you with a growl and slides a rusty revolver across the counter. You accept it graciously and leave. Where will you go? ',
+    options: [
+      ['Go to police station', 'policeStation'],
+      ['Go to school', 'townSchool'],
+    ]
+  },
+  'leaveShopkeeper': {
+    text: 'You exit the general store safely. You see the police station, and a school that you missed before...',
+    options: [
+      ['Go to police station', 'policeStation'],
+      ['Go to school', 'townSchool'],
+    ]
+  },
 };
 
 function renderScene(parent, story, sceneName) {
