@@ -55,57 +55,69 @@ const testStory = {
       resetInventory();
       window.localStorage.turnCounter = 0;
     },
-    text: 'A stranger says hello to you',
+
+    text: 'As you walk towards the exit of your nice and safe underground bunker, your toe catches and you fall out of your vault. You look to the East where you can see a town off in the distance and to the west there is an old run down farmhouse. Which way will you choose?',
+
     options: [
-      ['Say hello back...', 'sayHello'],
-      ['Say nothing...', 'sayNothing'],
+      ['Head into town', 'eastTown'],
+      ['Walk towards the farmhouse', 'farmHouse'],
     ],
   },
-  'sayHello': {
-    text: 'You say hello to the stranger... he smiles back. :)',
+  'townSchool': {
+    text: 'You enter the school and are immediately swarmed by a pack of angry, ravenous kindergarteners with sticky hands.',
     options: [
-      ['Punch the stranger', 'punchStranger'],
-      ['Leave him alone', 'die'],
+      ['fight them', 'fightKind'],
+      ['Give them more screen time', 'schoolGetaway'],
     ],
   },
-  'sayNothing': {
-    text: 'You say nothing. The stranger gets pretty angry...',
+  'schoolGetaway': {
+    text: 'The kids are distracted by the the bright colorful screens and you slip away unnoticed. You make it into the hallways where there are two doors. One leads to the cafeteria, the other to he gym. Which door do you choose?',
     options: [
-      ['Punch the stranger', 'punchStranger'],
-      ['Leave him alone', 'die'],
+      ['cafeteria', 'cafeteria'],
+      ['Gymnasium', 'gym'],
     ],
   },
-  'die': {
-    text: 'Oh no! You\'ve died! Better luck next time...',
-    options: [
-      ['Restart', 'start'],
-    ],
-  },
-  'punchStranger': {
-    text: 'You punch the stranger. He doesn\'t much care for that',
-    options: [
-      ['Run away', 'runAway'],
-      ['Apologize', 'apologize'],
-    ],
-  },
-  'runAway': {
-    text: 'You run away, but he stabs you in the back. Now you\'re dead...',
+  'fightKind': {
+    text: 'You grab the nearest charging kindergartener and start swinging wildly, but you are quickly overrun and fall to their sticky hands.',
     options: [
       ['Restart', 'start'],
     ],
   },
-  'apologize': {
-    text: 'You apologize, profusely, to the stranger. He accepts, and now you\'re best friends for life. YOU WIN!!!',
+  'cafeteria': {
+    text: 'You walk into cafeteria where you find a lifetime supply of snack pack puddings in every flavor imagineable. (Including double chocolate. You obviously win!',
+    options: [
+      ['Restart', 'start'],
+      
+    ],
+  },
+  'gym': {
+    text: 'You open the door and walk into the gymnasium where a group of undead 5th graders are armed with dodgeballs. It is an impossible choice what should you do in this situation?',
+    options: [
+      ['5 d\'s of dodgeball', '5dodge'],
+      ['Play Dead', 'playDead']
+    ],
+  },
+  '5dodge': {
+    text: 'You dodge, duck, dip, dive and ... dodge all around the 5th graders and take them all down! Patches o\'houlihan is smiling down on you, as you walk away from your victory. You win!!',
     options: [
       ['Restart', 'start'],
     ],
   },
+
   'eastTown': {
     text: 'You enter the town, and see a police station and a general store...',
     options: [
       ['Go to the police station...', 'policeStation'],
       ['Go to the general store...', 'generalStore'],
     ]
+
+  'playDead': {
+    text: 'You immedately lay down on the ground in the fetal position where the cruel 5th graders take no pity on you and pelt you with an endless barrage of hard rubber balls until you die. You lose!',
+    options: [
+      ['Restart', 'start'],
+      
+    ],
+
   },
   'policeStation': {
     text: 'You enter the police station, and find a person locked in a cell...',
