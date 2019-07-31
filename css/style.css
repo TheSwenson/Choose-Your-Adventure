@@ -100,7 +100,7 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
-    
+
 }
 .sceneText {
     text-align: center;
@@ -119,9 +119,12 @@ a{
   color: #fb33db;
 }
 body {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  background-color: #262626;
+  background-color: #151515;
+  background-image: url('../images/post-apocalyptic-1920x1080-284864-media.jpg');
+  background-blend-mode: multiply;
+  background-size: cover;
 }
 #logo-div, #nav-div {
   float: left;
@@ -142,6 +145,7 @@ body {
 #choose-name {
   text-align: center;
   display: block;
+  text-shadow: 0 0 10px black;
 }
 nav a, #hello-message {
   display: inline-block;
@@ -203,6 +207,10 @@ font-size: 2rem;
   margin-right: 10px;
 }
 
-.red {
+.pink {
     color: #fb33db;
+}
+
+.gameTitle {
+    font-family: 'Lacquer', sans-serif;
 }
