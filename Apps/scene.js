@@ -173,6 +173,12 @@ const testStory = {
       ['Turn and run!', 'wolves']
     ]
   },
+  'wolves': {
+    text: 'You leave the farmhouse and are greeted by a pack of zombie wolves, there\'s no hope as they charge at you and tear you limb from limb',
+    options: [
+      ['Restart', 'start'],
+    ]
+  },
   'houseSearch': {
     text: 'You decide to search the house and in the basement you find an entrance to a strange underground tunnel. Do you enter?',
     options: [
@@ -184,7 +190,13 @@ const testStory = {
     text: 'You enter the tunnel which after a few hundred feet opens into a missle silo. In the control room there\'s a big shiny red button. You can push it if you want, but do you?',
     options: [
       ['Push the button', 'nukeTheWorld'],
-      ['Stay away from the button and leave', 'mysteriousStranger']
+      ['Back away from the button', 'earthquake']
+    ]
+  },
+  'earthquake': {
+    text: 'You slowly back away from the missile, as you back away you feel the ground shake. You turn and start sprinting towards the exit but the missile itself breaks loose and falls on you, crushing and killing you instantly. You lose!',
+    options: [
+      ['Restart', 'start'],
     ]
   },
   'nukeTheWorld': {
