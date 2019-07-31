@@ -181,14 +181,14 @@ const testStory = {
     ]
   },
   'nukeSilo': {
-    text: 'You enter the tunnel which after a few hundred feet opens into a missle silo. In the control room there\'s a big shiny red button. You can push it if you want, but do you?',
+    text: 'You enter the tunnel which after a few hundred feet opens into a missile silo. In the control room there\'s a big shiny red button. You can push it if you want, but do you?',
     options: [
       ['Push the button', 'nukeTheWorld'],
       ['Stay away from the button and leave', 'mysteriousStranger']
     ]
   },
   'nukeTheWorld': {
-    text: 'Who can resist pushing the big red buton right? You press it and the missle roars to life. The silo opens and the missle lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
+    text: 'Who can resist pushing the big red buton right? You press it and the missle roars to life. The silo opens and the missile lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
     options: [
       ['Restart', 'start'],
       
@@ -209,10 +209,36 @@ const testStory = {
     ]
   },
   'helpShopkeeper': {
-    text: 'You dash over to the raider, give him a little boop on the nose and a swift kick to his rear. He shrieks in terror and scampers away. You reach over and give the cat on the counter a scratch behind his ears. The shopkeeper thanks you with a growl and slides a rusty revolver across the counter. You accept it graciously and leave. Where will you go? ',
+    text: 'You dash over to the raider, give him a little boop on the nose and a swift kick to his rear. He shrieks in terror and scampers away. You reach over and give the cat on the counter a scratch behind his ears. The shopkeeper thanks you with a growl and slides a rusty revolver across the counter. You accept it graciously and leave. On your way out you notice a manhole cover glinting in the afternoon sun. Further down the street is the school. Where will you go? ',
     options: [
-      ['Go to police station', 'policeStation'],
+      ['Go to manhole cover', 'manholeCover'],
       ['Go to school', 'townSchool'],
+    ]
+  },
+  'manholeCover': {
+    text: 'As you approach the manhole cover you notice that it is slightly askew... You could probably pry it open, even with your meager strength. The school is also still nearby. What do you do?',
+    options: [
+      ['Pry it open and delve below', 'pryCover'],
+      ['Go to school', 'townSchool'],
+    ]
+  },
+  'pryCover': {
+    text: 'You heave the cover off and carefully make your way down the rusty ladder. As you reach the bottom and adjust to the darkness and smell you notice four dark shapes approaching. As they get closer you are startled to realize they are adolescent mutated samurai tortoises. Each has a different colored trucker hat, and is holding a different type of kitchen utensil. Utterly frightened you call out: Who are you? They each respond with a different name of a founding father: Jefferson! Hamilton! Adams! Washington! What do you do? ',
+    options: [
+      ['Fight them', 'fightTorts'],
+      ['Scurry back up the ladder', 'upLadder'],
+    ]
+  },
+  'fightTorts': {
+    text: 'You exhale deeply and lash out at the quartet with everything you got... To no avail. These guys have pizza cutters, meat tenderizers, rolling pins, and menacing ladles. You become food.',
+    options: [
+      ['Restart', 'start'],
+    ]
+  },
+  'upLadder': {
+    text: 'You frantically try to climb up the rusty old ladder but the tortoises are too fast. *wink* They grab you and very quickly turn you into food.',
+    options: [
+      ['Restart', 'start'],
     ]
   },
   'leaveShopkeeper': {
