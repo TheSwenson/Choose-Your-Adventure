@@ -128,7 +128,7 @@ const testStory = {
     ]
   },
   'releasePrisoner': {
-    text: 'You throw caution to the wind and decide to ope the cell for the prisoner. He thanks you and immediately lunges at you strangling you. Seems he was locked up for a reason... You lose!',
+    text: 'You throw caution to the wind and decide to open the cell for the prisoner. He thanks you and immediately lunges at you strangling you. Seems he was locked up for a reason... You lose!',
     options: [
       ['Restart', 'start'],
       
