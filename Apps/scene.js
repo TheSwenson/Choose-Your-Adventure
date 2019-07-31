@@ -133,7 +133,9 @@ function renderScene(parent, story, sceneName) {
     const optionButton = document.createElement('button');
     optionButton.textContent = option[0];
     optionButton.classList.add('option');
-    optionButton.addEventListener('click', () => renderScene(parent, story, option[1]));
+    optionButton.addEventListener('click', () => {
+      renderScene(parent, story, option[1])
+    });
     optionsElement.appendChild(optionButton);
   }
   sceneElement.appendChild(optionsElement);
