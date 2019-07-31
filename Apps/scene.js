@@ -109,7 +109,8 @@ const testStory = {
     options: [
       ['Go to the police station...', 'policeStation'],
       ['Go to the general store...', 'generalStore'],
-    ]
+    ],
+  },
 
   'playDead': {
     text: 'You immedately lay down on the ground in the fetal position where the cruel 5th graders take no pity on you and pelt you with an endless barrage of hard rubber balls until you die. You lose!',
@@ -130,7 +131,7 @@ const testStory = {
     text: 'You exit the police station, and see the general store, and a school that you missed before...',
     options: [
       ['Go to general store', 'generalStore'],
-      ['Go to school', 'school'],
+      ['Go to school', 'townSchool'],
     ]
   }
 };
