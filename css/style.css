@@ -14,15 +14,19 @@
     color: #01ffff;
     font-family: 'Lacquer', sans-serif;
     border: 1.5px solid ;
+    width: auto;
     font-size: 1.5rem;
     padding:.25rem;
     font-weight: bolder;
-    margin: 0 auto;
+    display: inline-block;
 }
 .label {
   font-family: 'Lacquer', sans-serif;
   font-size: 3rem;
   color: #E94F37;
+}
+main {
+    text-align: center;
 }
 #submit, #name {
   text-align: center;
