@@ -47,7 +47,7 @@ function hasItem(itemName){
 }
 
 var inventory = {
-  
+
 }
 const testStory = {
   'start': {
@@ -103,13 +103,36 @@ const testStory = {
       ['Restart', 'start'],
     ],
   },
+
+  'eastTown': {
+    text: 'You enter the town, and see a police station and a general store...',
+    options: [
+      ['Go to the police station...', 'policeStation'],
+      ['Go to the general store...', 'generalStore'],
+    ]
+
   'playDead': {
     text: 'You immedately lay down on the ground in the fetal position where the cruel 5th graders take no pity on you and pelt you with an endless barrage of hard rubber balls until you die. You lose!',
     options: [
       ['Restart', 'start'],
       
     ],
+
   },
+  'policeStation': {
+    text: 'You enter the police station, and find a person locked in a cell...',
+    options: [
+      ['Release the prisoner...', 'releasePrisoner'],
+      ['Move on...', 'moveOn'],
+    ]
+  },
+  'moveOn': {
+    text: 'You exit the police station, and see the general store, and a school that you missed before...',
+    options: [
+      ['Go to general store', 'generalStore'],
+      ['Go to school', 'school'],
+    ]
+  }
 };
 
 function renderScene(parent, story, sceneName) {
@@ -143,7 +166,7 @@ function renderScene(parent, story, sceneName) {
   //Display in parent
   parent.innerHTML = '';
   parent.appendChild(sceneElement);
-  
+
 }
 
 if (!window.localStorage.turnCounter) {
