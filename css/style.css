@@ -82,9 +82,9 @@ a{
   color: #fb33db;
 }
 body {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  background-color: #101010;
+  background-color: #151515;
   background-image: url('../images/post-apocalyptic-1920x1080-284864-media.jpg');
   background-blend-mode: multiply;
   background-size: cover;
