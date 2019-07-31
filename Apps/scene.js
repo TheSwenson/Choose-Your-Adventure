@@ -29,7 +29,7 @@ function saveInventory(){
 }
 
 function loadInventory(){
-  inventory = JSON.parse(window.localStorage.inventory) || {}
+  inventory = window.localStorage.inventory ? JSON.parse(window.localStorage.inventory) : {};
 }
 
 function addItem(itemName){
@@ -118,6 +118,7 @@ function renderScene(parent, story, sceneName) {
   window.localStorage.turnCounter++;
   window.localStorage.currentScene = sceneName;
   }
+
   var turnCounter = document.querySelector('h3.turnNum');
   turnCounter.textContent = 'Current Turn: ' + window.localStorage.turnCounter;
   const sceneElement = document.createElement('div');
