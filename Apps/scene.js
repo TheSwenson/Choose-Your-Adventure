@@ -4,8 +4,11 @@ Story JSON structure:
 {
   'sceneName': {
     text: 'Scene dialogue here',
+    pre: function() {
+
+    },
     options: [
-      ['Option text here', 'sceneName'],
+      ['Option text here', 'consequence'],
       ['Option text here', 'sceneName'],
       ... etc ...
     ]
@@ -21,8 +24,37 @@ options: [
 ... etc ...
 }
 */
+function saveInventory(){
+  window.localStorage.inventory = JSON.stringify(inventory);
+}
+
+function loadInventory(){
+  inventory = JSON.parse(window.localStorage.inventory) || {}
+}
+
+function addItem(itemName){
+  inventory[itemName] = true;
+  saveInventory();
+}
+
+function resetInventory(){
+  inventory = {};
+  saveInventory();
+}
+
+function hasItem(itemName){
+  return !!inventory[itemName];
+}
+
+var inventory = {
+  
+}
 const testStory = {
   'start': {
+    pre: function() {
+      resetInventory();
+      window.localStorage.turnCounter = 0;
+    },
     text: 'A stranger says hello to you',
     options: [
       ['Say hello back...', 'sayHello'],
@@ -79,7 +111,15 @@ const testStory = {
 
 function renderScene(parent, story, sceneName) {
   let scene = story[sceneName];
+  if (scene.pre) {
+    scene.pre();
+  }
+  if (window.localStorage.currentScene !== sceneName){
+  window.localStorage.turnCounter++;
   window.localStorage.currentScene = sceneName;
+  }
+  var turnCounter = document.querySelector('h3.turnNum');
+  turnCounter.textContent = 'Current Turn: ' + window.localStorage.turnCounter;
   const sceneElement = document.createElement('div');
   sceneElement.classList.add('scene');
   const dialogueElement = document.createElement('p');
@@ -102,5 +142,9 @@ function renderScene(parent, story, sceneName) {
   
 }
 
-renderScene(document.getElementById('scene-root'), testStory, window.localStorage.currentScene || 'start');
+if (!window.localStorage.turnCounter) {
+  window.localStorage.turnCounter = 0;
+}
 
+loadInventory();
+renderScene(document.getElementById('scene-root'), testStory, window.localStorage.currentScene || 'start');
