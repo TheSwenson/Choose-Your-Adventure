@@ -64,7 +64,7 @@ footer {
     margin: 0 auto;
     max-width: 65%;
     color: #F6F7EB;
-
+    margin-bottom: 10vh;
 }
 header {
   background-color: black;
@@ -80,9 +80,6 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #262626;
-}
-#sceen-root {
-  margin-bottom: 5vh;
 }
 #logo-div, #nav-div {
   float: left;
