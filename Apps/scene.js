@@ -87,7 +87,7 @@ const testStory = {
     text: 'You walk into cafeteria where you find a lifetime supply of snack pack puddings in every flavor imagineable. (Including double chocolate. You obviously win!',
     options: [
       ['Restart', 'start'],
-      
+
     ],
   },
   'gym': {
@@ -116,7 +116,7 @@ const testStory = {
     text: 'You immedately lay down on the ground in the fetal position where the cruel 5th graders take no pity on you and pelt you with an endless barrage of hard rubber balls until you die. You lose!',
     options: [
       ['Restart', 'start'],
-      
+
     ],
 
   },
@@ -149,8 +149,8 @@ function renderScene(parent, story, sceneName) {
     scene.pre();
   }
   if (window.localStorage.currentScene !== sceneName){
-  window.localStorage.turnCounter++;
-  window.localStorage.currentScene = sceneName;
+    window.localStorage.turnCounter++;
+    window.localStorage.currentScene = sceneName;
   }
 
   var turnCounter = document.querySelector('h3.turnNum');
@@ -176,7 +176,6 @@ function renderScene(parent, story, sceneName) {
   //Display in parent
   parent.innerHTML = '';
   parent.appendChild(sceneElement);
-
 }
 
 if (!window.localStorage.turnCounter) {

@@ -14,16 +14,20 @@
     color: #01ffff;
     font-family: 'Lacquer', sans-serif;
     border: 1.5px solid ;
+    width: auto;
     font-size: 1.5rem;
     padding:.25rem;
     font-weight: bolder;
-    margin: 0 auto;
+    display: inline-block;
 }
 .label {
   font-family: 'Lacquer', sans-serif;
   font-size: 3rem;
 
   color: #01ffff;
+}
+main {
+    text-align: center;
 }
 #submit, #name {
   text-align: center;
@@ -65,7 +69,7 @@ footer {
     margin: 0 auto;
     max-width: 65%;
     color: #F6F7EB;
-    
+    margin-bottom: 10vh;
 
 }
 header {
@@ -78,13 +82,9 @@ a{
   color: #fb33db;
 }
 body {
-  width: 100vw;
   height: 100vh;
   margin: 0;
   background-color: #262626;
-}
-#sceen-root {
-  margin-bottom: 5vh;
 }
 #logo-div, #nav-div {
   float: left;
@@ -117,7 +117,7 @@ nav a, #hello-message {
 }
 nav a {
   font-weight: 900;
-  font-size: 150%;
+  font-size: 1.5vw;
   text-decoration: none;
 }
 nav a:first-child {
