@@ -21,6 +21,31 @@ options: [
 ... etc ...
 }
 */
+function saveInventory(){
+  window.localStorage.inventory = JSON.stringify(inventory);
+}
+
+function loadInventory(){
+  inventory = JSON.parse(window.localStorage.inventory) || {}
+}
+
+function addItem(itemName){
+  inventory[itemName] = true;
+  saveInventory();
+}
+
+function resetInventory(){
+  inventory = {};
+  saveInventory();
+}
+
+function hasItem(itemName){
+  return !!inventory[itemName];
+}
+
+var inventory = {
+  
+}
 const testStory = {
   'start': {
     text: 'A stranger says hello to you',
@@ -102,5 +127,6 @@ function renderScene(parent, story, sceneName) {
   
 }
 
+loadInventory();
+console.log(inventory);
 renderScene(document.getElementById('scene-root'), testStory, window.localStorage.currentScene || 'start');
-
