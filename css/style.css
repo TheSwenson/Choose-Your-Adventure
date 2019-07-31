@@ -14,7 +14,6 @@
     color: #01ffff;
     font-family: 'Lacquer', sans-serif;
     border: 1.5px solid ;
-    width: 14vw;
     font-size: 1.5rem;
     padding:.25rem;
     font-weight: bolder;
@@ -23,20 +22,25 @@
 .label {
   font-family: 'Lacquer', sans-serif;
   font-size: 3rem;
-  color: #E94F37;
+
+  color: #01ffff;
 }
 #submit, #name {
   text-align: center;
   font-family: 'Lacquer', sans-serif;
   font-size: 1.5rem;
-  color: #E94F37;
+
+  color: #01ffff;
+
   background-color: #262626;
   border: 2px solid #101010;
   border-radius: 5px;
   transition-duration: 1s;
 }
 #submit:hover {
-  box-shadow: 0 0 10px #E94F37;
+
+  box-shadow: 0 0 10px #01ffff;
+
 }
 /*button */
 .option {
@@ -69,7 +73,7 @@ header {
   font-family: 'Lacquer', sans-serif;
 }
 a{
-  color: #ffb3fd;
+  color: #fb33db;
 }
 body {
   width: 100vw;
