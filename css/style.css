@@ -118,6 +118,9 @@ header {
 a{
   color: #fb33db;
 }
+a:visited{
+  color: #01ffc3;;
+}
 body {
   min-height: 100vh;
   margin: 0;
