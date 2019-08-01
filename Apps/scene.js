@@ -75,7 +75,7 @@ const testStory = {
   },
   'schoolGetaway': {
     image: 'images/school.jpg',
-    text: 'The kids are distracted by the the bright colorful screens and you slip away unnoticed. You make it into the hallways where there are two doors. One leads to the cafeteria, the other to he gym. Which door do you choose?',
+    text: 'The kids are distracted by the the bright colorful screens and you slip away unnoticed. You make it into the hallways where there are two doors. One leads to the cafeteria, the other to the gym. Which door do you choose?',
     options: [
       ['cafeteria', 'cafeteria'],
       ['Gymnasium', 'gym'],
@@ -139,7 +139,7 @@ const testStory = {
   },
   'releasePrisoner': {
     image: 'images/police.jpg',
-    text: 'You throw caution to the wind and decide to ope the cell for the prisoner. He thanks you and immediately lunges at you strangling you. Seems he was locked up for a reason... You lose!',
+    text: 'You throw caution to the wind and decide to open the cell for the prisoner. He thanks you and immediately lunges at you strangling you. Seems he was locked up for a reason... You lose!',
     options: [
       ['Restart', 'start'],
 
@@ -201,24 +201,41 @@ const testStory = {
     ]
   },
   'nukeTheWorld': {
-    text: 'Who can resist pushing the big red button, right? You press it and the missle roars to life. The silo opens and the missile lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
+
+    text: 'Who can resist pushing the big red button right? You press it and the missile roars to life. The silo opens and the missile lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
+
     options: [
       ['Restart', 'start'],
 
     ]
   },
   'mysteriousStranger': {
-    text: 'After retreating from the silo and exiting the farm house a mysterious man is standing out front. What are you going to do?',
+    text: 'After retreating from the silo and exiting the farm house a mysterious man is standing out front staring at you. You introduce yourself, "Greetings stranger, my name is $name. He grumbles some less than pleasant insults. What are you going to do?',
     options: [
       ['Ignore him', 'ignore'],
-      ['Punch him in the face', 'punchStranger'],
+
+      ['Punch him in the face', 'angryStranger'],
     ]
     },
-    'punchStranger': {
-      text: 'The Mysterious Stranger is not amused. He',
+  'ignore': {
+      text: 'You choose to ignore him, which seems to anger him. He starts shouting louder and flailing his arms like a mad man. You\'re not even sure what language he\'s speaking at this point and it seems like he getting ready to fight you. Now what?',
       options: [
-        ['Ignore him', 'ignore'],
-        ['Punch him in the face', 'farmHouse'],
+        ['Continue to ignore him', 'ignore'],
+        ['Punch him in the face', 'angryStranger'],
+      ]
+      },
+  'angryStranger': {
+        text: 'You walk up to the stranger and punch him square in the nose, for seem reason he doesn\'s seem to like that. The stranger starts to walk owards you threateningly, you only have a short time to react!',
+        options: [
+          ['apologize', 'apologize'],
+          ['Punch him in the face again', 'punchTwo'],
+        ]
+        },
+  'apologize': {
+      text: 'You start apologizing profusely and all the sudden the man stops and starts weeping. "No-one has ever shown me kindness before. There\'s noone left in this world that cares!" You walk up and give the stranger a hug which calms him down. He asks if he can come with you in your adventures and you accept graciously. You two spend the rest of your time traversing the wasteland as best buddies, killing raiders and pillaging villages. You win!' ,
+      options: [
+        ['restart', 'start']
+
       ]
       },
   'generalStore': {
@@ -300,7 +317,7 @@ function renderScene(parent, story, sceneName) {
   sceneElement.classList.add('scene');
   const dialogueElement = document.createElement('p');
   dialogueElement.classList.add('dialogue');
-  dialogueElement.textContent = scene.text;
+  dialogueElement.textContent = scene.text.replace("$name", username);
   sceneElement.appendChild(dialogueElement);
   const optionsElement = document.createElement('div');
   optionsElement.classList.add('options');
