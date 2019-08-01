@@ -14,17 +14,20 @@
     color: #01ffff;
     font-family: 'Lacquer', sans-serif;
     border: 1.5px solid ;
-    width: 14vw;
+    width: auto;
     font-size: 1.5rem;
     padding:.25rem;
     font-weight: bolder;
-    margin: 0 auto;
+    display: inline-block;
 }
 .label {
   font-family: 'Lacquer', sans-serif;
   font-size: 3rem;
 
   color: #01ffff;
+}
+main {
+    text-align: center;
 }
 #submit, #name {
   text-align: center;
@@ -44,13 +47,51 @@
 
 }
 /*button */
+.option:hover{
+  animation: shadow-pulsehover 2s infinite;
+    
+    border-radius: 15px;
+    margin: 0px 35px;
+    
+  
+}
 .option {
-    height: 4rem;
-    width: 8rem;
+    height: 20vmin;
+    width: 50vmin;
     border-right: 3px solid rgb(44, 43, 43);
     border-bottom: 3px solid rgb(44, 43, 43);
     font-family: 'Lacquer', sans-serif;
+    animation: shadow-pulse 2s infinite;
+    font-size: 3vmin;
+    
+    border-radius: 15px;
+    margin: 0px 35px;
+    
+    color: #101010;
+    font-weight: 200;
+    overflow: hidden;
 }
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(1, 255, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(1, 255, 255, 0);
+  }
+}
+
+@keyframes shadow-pulsehover
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(251, 51, 219, 1);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(1, 255, 255, 0);
+  }
+}
+
 footer {
     position: fixed;
     left: 0;
@@ -59,13 +100,14 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
+
 }
 .sceneText {
     text-align: center;
     margin: 0 auto;
     max-width: 65%;
     color: #F6F7EB;
-
+    margin-bottom: 10vh;
 }
 header {
   background-color: black;
@@ -77,10 +119,12 @@ a{
   color: #fb33db;
 }
 body {
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  background-color: #262626;
+  background-color: #363636;
+  background-image: url('../images/post-apocalyptic-1920x1080-284864-media.jpg');
+  background-blend-mode: multiply;
+  background-size: cover;
 }
 #logo-div, #nav-div {
   float: left;
@@ -101,6 +145,7 @@ body {
 #choose-name {
   text-align: center;
   display: block;
+  text-shadow: 0 0 10px black;
 }
 nav a, #hello-message {
   display: inline-block;
@@ -113,7 +158,7 @@ nav a, #hello-message {
 }
 nav a {
   font-weight: 900;
-  font-size: 150%;
+  font-size: 1.5vw;
   text-decoration: none;
 }
 nav a:first-child {
@@ -136,4 +181,18 @@ p.dialogue{
   font-family: 'Fredoka One', cursive;
 
 font-size: 2rem;
+}
+.profile {
+  color: #F6F7EB;
+  float: left;
+  width: 23%;
+  margin-right: 10px;
+}
+
+.pink {
+    color: #fb33db;
+}
+
+.gameTitle {
+    font-family: 'Lacquer', sans-serif;
 }
