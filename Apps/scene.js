@@ -108,7 +108,7 @@ const testStory = {
     image: 'images/school.jpg',
     text: 'You dodge, duck, dip, dive and ... dodge all around the 5th graders and take them all down! Patches o\'houlihan is smiling down on you, as you walk away from your victory. That was so cool of you. You win!!!',
     options: [
-      ['Restart', 'start'], 
+      ['Restart', 'start'],
     ],
   },
 
@@ -204,7 +204,7 @@ const testStory = {
     text: 'Who can resist pushing the big red button right? You press it and the missle roars to life. The silo opens and the missile lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
     options: [
       ['Restart', 'start'],
-      
+
     ]
   },
   'mysteriousStranger': {
@@ -275,7 +275,7 @@ function renderScene(parent, story, sceneName) {
     window.localStorage.currentScene = sceneName;
   }
 
-  if (window.localStorage.turnCounter === 0) {
+  if (parseInt(window.localStorage.turnCounter) === 0) {
     window.localStorage.turnCounter = 1;
   }
 
