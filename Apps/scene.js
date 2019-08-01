@@ -184,7 +184,7 @@ const testStory = {
     text: 'You decide to search the house and in the basement you find an entrance to a strange underground tunnel. Do you enter?',
     options: [
       ['Enter the tunnel', 'nukeSilo'],
-      ['Turn tail and run', 'stranger']
+      ['Turn tail and run', 'mysteriousStranger']
     ]
   },
   'nukeSilo': {
@@ -208,12 +208,32 @@ const testStory = {
     ]
   },
   'mysteriousStranger': {
-    text: 'After retreating from the silo and exiting the farm house a mysterious man is standing out front. What are you going to do?',
+    text: 'After retreating from the silo and exiting the farm house a mysterious man is standing out front staring at you. You introduce yourself, "Greetings stranger, my name is $name. He grumbles some less than pleasant insults. What are you going to do?',
     options: [
       ['Ignore him', 'ignore'],
-      ['Punch him in the face', 'farmHouse'],
+      ['Punch him in the face', 'angryStranger'],
     ]
     },
+  'ignore': {
+      text: 'You choose to ignore him, which seems to anger him. He starts shouting louder and flailing his arms like a mad man. You\'re not even sure what language he\'s speaking at this point and it seems like he getting ready to fight you. Now what?',
+      options: [
+        ['Continue to ignore him', 'ignore'],
+        ['Punch him in the face', 'angryStranger'],
+      ]
+      },
+  'angryStranger': {
+        text: 'You walk up to the stranger and punch him square in the nose, for seem reason he doesn\'s seem to like that. The stranger starts to walk owards you threateningly, you only have a short time to react!',
+        options: [
+          ['apologize', 'apologize'],
+          ['Punch him in the face again', 'punchTwo'],
+        ]
+        },
+  'apologize': {
+      text: 'You start apologizing profusely and all the sudden the man stops and starts weeping. "No-one has ever shown me kindness before. There\'s noone left in this world that cares!" You walk up and give the stranger a hug which calms him down. He asks if he can come with you in your adventures and you accept graciously. You two spend the rest of your time traversing the wasteland as best buddies, killing raiders and pillaging villages. You win!' ,
+      options: [
+        ['restart', 'start']
+      ]
+      },
   'generalStore': {
     text: 'You cautiously approach the decrepit general store. You can hear raised voices from outside. As you open the creaky door it becomes immediately apparent that there is a robbery in progress. A scary looking raider guy with spikes all over his leather clothes has a laser pistol pointed at the shopkeeper and his cat. The shopkeeper is even scarier. Old as sin and missing an eye, he seems unfazed by his current situation... What will you do? ',
     options: [
@@ -293,7 +313,7 @@ function renderScene(parent, story, sceneName) {
   sceneElement.classList.add('scene');
   const dialogueElement = document.createElement('p');
   dialogueElement.classList.add('dialogue');
-  dialogueElement.textContent = scene.text;
+  dialogueElement.textContent = scene.text.replace("$name", username);
   sceneElement.appendChild(dialogueElement);
   const optionsElement = document.createElement('div');
   optionsElement.classList.add('options');
