@@ -58,8 +58,7 @@ main {
 .option {
     height: 20vmin;
     width: 50vmin;
-    border-right: 3px solid rgb(44, 43, 43);
-    border-bottom: 3px solid rgb(44, 43, 43);
+    border: none;
     font-family: 'Lacquer', sans-serif;
     animation: shadow-pulse 2s infinite;
     font-size: 3vmin;
@@ -128,7 +127,6 @@ body {
   background-image: url('../images/post-apocalyptic-1920x1080-284864-media.jpg');
   background-blend-mode: multiply;
   background-size: cover;
-  box-shadow: inset 0 0 128px black;
 }
 #logo-div, #nav-div {
   float: left;
@@ -193,7 +191,7 @@ font-size: 2rem;
   margin-right: 2px;
   padding: 2.1%;
   text-align: center;
-  
+
 }
 
 .pink {
@@ -207,4 +205,3 @@ font-size: 2rem;
 .cite {
     color: white;
 }
-
