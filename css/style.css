@@ -136,12 +136,12 @@ body {
   float: right;
 }
 #logo-div {
-  width: 33vw;
+  width: 25vw;
   height: 10vw;
 }
 #nav-div {
   float: left;
-  width: 40vw;
+  width: 48vw;
   height: 10vw;
   /*padding: 4vw 0 0 0;*/
 }
