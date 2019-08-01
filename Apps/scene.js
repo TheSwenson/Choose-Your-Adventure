@@ -75,7 +75,7 @@ const testStory = {
   },
   'schoolGetaway': {
     image: 'images/school.jpg',
-    text: 'The kids are distracted by the the bright colorful screens and you slip away unnoticed. You make it into the hallways where there are two doors. One leads to the cafeteria, the other to he gym. Which door do you choose?',
+    text: 'The kids are distracted by the the bright colorful screens and you slip away unnoticed. You make it into the hallways where there are two doors. One leads to the cafeteria, the other to the gym. Which door do you choose?',
     options: [
       ['cafeteria', 'cafeteria'],
       ['Gymnasium', 'gym'],
@@ -139,7 +139,7 @@ const testStory = {
   },
   'releasePrisoner': {
     image: 'images/police.jpg',
-    text: 'You throw caution to the wind and decide to ope the cell for the prisoner. He thanks you and immediately lunges at you strangling you. Seems he was locked up for a reason... You lose!',
+    text: 'You throw caution to the wind and decide to open the cell for the prisoner. He thanks you and immediately lunges at you strangling you. Seems he was locked up for a reason... You lose!',
     options: [
       ['Restart', 'start'],
 
@@ -201,7 +201,7 @@ const testStory = {
     ]
   },
   'nukeTheWorld': {
-    text: 'Who can resist pushing the big red button right? You press it and the missle roars to life. The silo opens and the missile lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
+    text: 'Who can resist pushing the big red button right? You press it and the missile roars to life. The silo opens and the missile lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
     options: [
       ['Restart', 'start'],
 
