@@ -24,31 +24,32 @@ options: [
 ... etc ...
 }
 */
+//allows you to put a stringified item into local storage
 function saveInventory(){
   window.localStorage.inventory = JSON.stringify(inventory);
 }
-
+//checks if there are items in local storage, if not returns empty inventory object
 function loadInventory(){
   inventory = window.localStorage.inventory ? JSON.parse(window.localStorage.inventory) : {};
 }
-
+//adds name of item set equal to true in the inventory object
 function addItem(itemName){
   inventory[itemName] = true;
   saveInventory();
 }
-
+// saves an empty inventory when called. so people cant use items saved in local storage after they have died and reset the game.
 function resetInventory(){
   inventory = {};
   saveInventory();
 }
-
+//checks to see if inventory contains a specific item
 function hasItem(itemName){
   return !!inventory[itemName];
 }
 
 var inventory = {
-
 }
+
 const testStory = {
   'start': {
     image: 'images/Doomsday vault.jpg',
@@ -57,7 +58,7 @@ const testStory = {
       window.localStorage.turnCounter = 0;
     },
 
-    text: 'As you walk towards the exit of your nice and safe underground bunker, your toe catches and you fall out of your vault. You look to the East where you can see a town off in the distance and to the west there is an old run down farmhouse. Which way will you choose?',
+    text: 'As you walk towards the exit of your nice and safe underground bunker, your toe catches and you fall out of your vault. You look to the East where you can see a town off in the distance and to the West there is an old run down farmhouse. Which way will you choose?',
 
     options: [
       ['Head into town', 'eastTown'],
@@ -89,7 +90,7 @@ const testStory = {
   },
   'cafeteria': {
     image: 'images/school.jpg',
-    text: 'You walk into cafeteria where you find a lifetime supply of snack pack puddings in every flavor imagineable. (Including double chocolate. You obviously win!',
+    text: 'You walk into cafeteria where you find a lifetime supply of snack pack puddings in every flavor imaginable. (Including double chocolate.) You obviously win!',
     options: [
       ['Restart', 'start'],
 
@@ -97,7 +98,7 @@ const testStory = {
   },
   'gym': {
     image: 'images/school.jpg',
-    text: 'You open the door and walk into the gymnasium where a group of undead 5th graders are armed with dodgeballs. It is an impossible choice what should you do in this situation?',
+    text: 'You open the door and walk into the gymnasium where a group of undead 5th graders are armed with dodgeballs. It is an impossible choice. What should you do in this situation?',
     options: [
       ['5 d\'s of dodgeball', '5dodge'],
       ['Play Dead', 'playDead']
@@ -105,9 +106,9 @@ const testStory = {
   },
   '5dodge': {
     image: 'images/school.jpg',
-    text: 'You dodge, duck, dip, dive and ... dodge all around the 5th graders and take them all down! Patches o\'houlihan is smiling down on you, as you walk away from your victory. You win!!',
+    text: 'You dodge, duck, dip, dive and ... dodge all around the 5th graders and take them all down! Patches o\'houlihan is smiling down on you, as you walk away from your victory. That was so cool of you. You win!!!',
     options: [
-      ['Restart', 'start'],
+      ['Restart', 'start'], 
     ],
   },
 
@@ -188,7 +189,7 @@ const testStory = {
     ]
   },
   'nukeTheWorld': {
-    text: 'Who can resist pushing the big red buton right? You press it and the missle roars to life. The silo opens and the missile lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
+    text: 'Who can resist pushing the big red button right? You press it and the missle roars to life. The silo opens and the missile lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
     options: [
       ['Restart', 'start'],
       
@@ -223,7 +224,7 @@ const testStory = {
     ]
   },
   'pryCover': {
-    text: 'You heave the cover off and carefully make your way down the rusty ladder. As you reach the bottom and adjust to the darkness and smell you notice four dark shapes approaching. As they get closer you are startled to realize they are adolescent mutated samurai tortoises. Each has a different colored trucker hat, and is holding a different type of kitchen utensil. Utterly frightened you call out: Who are you? They each respond with a different name of a founding father: Jefferson! Hamilton! Adams! Washington! What do you do? ',
+    text: 'You heave the cover off and carefully make your way down the rusty ladder. As you reach the bottom and adjust to the darkness and smell you notice four dark shapes approaching. As they get closer you are startled to realize they are adolescent mutated samurai tortoises. Each has a different colored trucker hat, and is holding a different type of kitchen utensil. Utterly frightened you call out: Who are you? They each respond with a different name of a founding father: Jefferson! Hamilton! Adams! Washington! What do you do?! ',
     options: [
       ['Fight them', 'fightTorts'],
       ['Scurry back up the ladder', 'upLadder'],
