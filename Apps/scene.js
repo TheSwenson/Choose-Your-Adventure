@@ -211,9 +211,16 @@ const testStory = {
     text: 'After retreating from the silo and exiting the farm house a mysterious man is standing out front. What are you going to do?',
     options: [
       ['Ignore him', 'ignore'],
-      ['Punch him in the face', 'farmHouse'],
+      ['Punch him in the face', 'punchStranger'],
     ]
     },
+    'punchStranger': {
+      text: 'The Mysterious Stranger is not amused. He',
+      options: [
+        ['Ignore him', 'ignore'],
+        ['Punch him in the face', 'farmHouse'],
+      ]
+      },
   'generalStore': {
     text: 'You cautiously approach the decrepit general store. You can hear raised voices from outside. As you open the creaky door it becomes immediately apparent that there is a robbery in progress. A scary looking raider guy with spikes all over his leather clothes has a laser pistol pointed at the shopkeeper and his cat. The shopkeeper is even scarier. Old as sin and missing an eye, he seems unfazed by his current situation... What will you do? ',
     options: [
