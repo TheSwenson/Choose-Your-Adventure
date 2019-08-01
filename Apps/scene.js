@@ -228,7 +228,7 @@ const testStory = {
     options: [
       ['Fight them', 'fightTorts'],
       ['Scurry back up the ladder', 'upLadder'],
-    ]
+    ] 
   },
   'fightTorts': {
     text: 'You exhale deeply and lash out at the quartet with everything you got... To no avail. These guys have pizza cutters, meat tenderizers, rolling pins, and menacing ladles. You become food.',
