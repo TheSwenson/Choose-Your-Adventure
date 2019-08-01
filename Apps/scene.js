@@ -225,7 +225,7 @@ const testStory = {
       ]
       },
   'angryStranger': {
-        text: 'You walk up to the stranger and punch him square in the nose, for seem reason he doesn\'s seem to like that. The stranger starts to walk owards you threateningly, you only have a short time to react!',
+        text: 'You walk up to the stranger and punch him square in the nose, for seem reason he doesn\'s seem to like that. The stranger starts to walk towards you threateningly, you only have a short time to react!',
         options: [
           ['apologize', 'apologize'],
           ['Punch him in the face again', 'punchTwo'],
