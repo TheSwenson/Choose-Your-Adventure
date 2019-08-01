@@ -49,11 +49,11 @@ main {
 /*button */
 .option:hover{
   animation: shadow-pulsehover 2s infinite;
-    
+
     border-radius: 15px;
     margin: 0px 35px;
-    
-  
+
+
 }
 .option {
     height: 20vmin;
@@ -63,10 +63,10 @@ main {
     font-family: 'Lacquer', sans-serif;
     animation: shadow-pulse 2s infinite;
     font-size: 3vmin;
-    
+
     border-radius: 15px;
     margin: 0px 35px;
-    
+
     color: #101010;
     font-weight: 200;
     overflow: hidden;
@@ -128,6 +128,7 @@ body {
   background-image: url('../images/post-apocalyptic-1920x1080-284864-media.jpg');
   background-blend-mode: multiply;
   background-size: cover;
+  box-shadow: inset 0 0 128px black;
 }
 #logo-div, #nav-div {
   float: left;
