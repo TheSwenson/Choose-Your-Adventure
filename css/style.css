@@ -124,7 +124,7 @@ a:visited{
 body {
   min-height: 100vh;
   margin: 0;
-  background-color: #363636;
+  background-color: #666666;
   background-image: url('../images/post-apocalyptic-1920x1080-284864-media.jpg');
   background-blend-mode: multiply;
   background-size: cover;
@@ -185,25 +185,7 @@ p.dialogue{
 
 font-size: 2rem;
 }
-#JacobErvin {
-  color: #F6F7EB;
-  float: left;
-  width: 23%;
-  margin-right: 10px;
-}
-#JacobSwenson {
-  color: #F6F7EB;
-  float: left;
-  width: 23%;
-  margin-right: 10px;
-}
-#Andy {
-  color: #F6F7EB;
-  float: left;
-  width: 23%;
-
-}
-#Calvin {
+.profile {
   color: #F6F7EB;
   float: left;
   width: 23%;
