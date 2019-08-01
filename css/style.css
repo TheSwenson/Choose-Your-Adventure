@@ -49,11 +49,11 @@ main {
 /*button */
 .option:hover{
   animation: shadow-pulsehover 2s infinite;
-    
+
     border-radius: 15px;
     margin: 0px 35px;
-    
-  
+
+
 }
 .option {
     height: 20vmin;
@@ -63,10 +63,10 @@ main {
     font-family: 'Lacquer', sans-serif;
     animation: shadow-pulse 2s infinite;
     font-size: 3vmin;
-    
+
     border-radius: 15px;
     margin: 0px 35px;
-    
+
     color: #101010;
     font-weight: 200;
     overflow: hidden;
@@ -132,6 +132,7 @@ body {
   background-image: url('../images/post-apocalyptic-1920x1080-284864-media.jpg');
   background-blend-mode: multiply;
   background-size: cover;
+  box-shadow: inset 0 0 128px black;
 }
 #logo-div, #nav-div {
   float: left;
@@ -140,12 +141,12 @@ body {
   float: right;
 }
 #logo-div {
-  width: 33vw;
+  width: 25vw;
   height: 10vw;
 }
 #nav-div {
   float: left;
-  width: 40vw;
+  width: 48vw;
   height: 10vw;
   /*padding: 4vw 0 0 0;*/
 }
@@ -192,8 +193,11 @@ font-size: 2rem;
 .profile {
   color: #F6F7EB;
   float: left;
-  width: 23%;
-  margin-right: 10px;
+  width: 20%;
+  margin-right: 2px;
+  padding: 2.1%;
+  text-align: center;
+  
 }
 
 .pink {
@@ -203,3 +207,8 @@ font-size: 2rem;
 .gameTitle {
     font-family: 'Lacquer', sans-serif;
 }
+
+.cite {
+    color: white;
+}
+

@@ -161,7 +161,7 @@ const testStory = {
     ]
   },
   'start2': {
-    text: 'You come back to where you started. Are you going to head into town or go back to the farm house?',
+    text: 'You come back to where you started. Are you going to head in to town or go back to the farm house?',
     options: [
       ['Head into town', 'eastTown'],
       ['Walk towards the farmhouse', 'farmHouse']
@@ -201,7 +201,9 @@ const testStory = {
     ]
   },
   'nukeTheWorld': {
+
     text: 'Who can resist pushing the big red button right? You press it and the missile roars to life. The silo opens and the missile lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
+
     options: [
       ['Restart', 'start'],
 
@@ -211,6 +213,7 @@ const testStory = {
     text: 'After retreating from the silo and exiting the farm house a mysterious man is standing out front staring at you. You introduce yourself, "Greetings stranger, my name is $name. He grumbles some less than pleasant insults. What are you going to do?',
     options: [
       ['Ignore him', 'ignore'],
+
       ['Punch him in the face', 'angryStranger'],
     ]
     },
@@ -232,6 +235,7 @@ const testStory = {
       text: 'You start apologizing profusely and all the sudden the man stops and starts weeping. "No-one has ever shown me kindness before. There\'s noone left in this world that cares!" You walk up and give the stranger a hug which calms him down. He asks if he can come with you in your adventures and you accept graciously. You two spend the rest of your time traversing the wasteland as best buddies, killing raiders and pillaging villages. You win!' ,
       options: [
         ['restart', 'start']
+
       ]
       },
   'generalStore': {
