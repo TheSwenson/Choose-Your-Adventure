@@ -161,7 +161,7 @@ const testStory = {
     ]
   },
   'start2': {
-    text: 'You come back to where you started. Are you going to head into town or go back to the farm house?',
+    text: 'You come back to where you started. Are you going to head in to town or go back to the farm house?',
     options: [
       ['Head into town', 'eastTown'],
       ['Walk towards the farmhouse', 'farmHouse']
@@ -184,7 +184,7 @@ const testStory = {
     text: 'You decide to search the house and in the basement you find an entrance to a strange underground tunnel. Do you enter?',
     options: [
       ['Enter the tunnel', 'nukeSilo'],
-      ['Turn tail and run', 'stranger']
+      ['Turn tail and run', 'mysteriousStranger']
     ]
   },
   'nukeSilo': {
@@ -201,7 +201,7 @@ const testStory = {
     ]
   },
   'nukeTheWorld': {
-    text: 'Who can resist pushing the big red button right? You press it and the missle roars to life. The silo opens and the missile lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
+    text: 'Who can resist pushing the big red button, right? You press it and the missle roars to life. The silo opens and the missile lifts off, only then do you realize the button was labeled Mutually Assured Destruction. You inadvertantly launched every remaining nuke in the U.S. arsenal and wipe out all remaining life on the planet. I consider that a win!',
     options: [
       ['Restart', 'start'],
 
