@@ -189,8 +189,10 @@ font-size: 2rem;
   color: #F6F7EB;
   float: left;
   width: 20%;
-  margin-right: 10px;
-  padding: 2%;
+  margin-right: 2px;
+  padding: 2.1%;
+  text-align: center;
+  
 }
 
 .pink {
