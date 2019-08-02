@@ -58,7 +58,7 @@ const testStory = {
       window.localStorage.turnCounter = 0;
     },
 
-    text: 'As you walk towards the exit of your nice and safe underground bunker, your toe catches and you fall out of your vault. You look to the East where you can see a town off in the distance and to the West there is an old run down farmhouse. Which way will you choose?',
+    text: 'Welcome to Survival Is a Lie, $name. A post apocalyptic zombie choose your own adventure game, now let\'s begin. As you walk towards the exit of your nice and safe underground bunker, your toe catches and you fall out of your vault. You look to the East where you can see a town off in the distance and to the West there is an old run down farmhouse. Which way will you choose?',
 
     options: [
       ['Head into town', 'eastTown'],
